@@ -793,11 +793,14 @@
 
   /* Section is taller than viewport so the inner .stage can pin while words reveal.
      Tuned to 150vh so word stagger has 50vh of scroll travel — long enough to feel
-     deliberate but no dead space below. */
+     deliberate but no dead space below.
+     overflow: clip (not hidden) — clips visually like hidden but does NOT create a
+     containing block that would break the inner .stage's position:sticky. */
   .v4-stillhouse {
     position: relative;
     height: 150vh;
     background: var(--ink-2);
+    overflow: clip;
   }
   .v4-stillhouse .stage {
     position: sticky; top: 0;
@@ -976,6 +979,7 @@
     position: relative;
     height: 130vh;
     background: var(--ink-2);
+    overflow: clip;
   }
   .v4-table .stage {
     position: sticky; top: 0;
@@ -1079,6 +1083,7 @@
     position: relative;
     height: 150vh;
     background: var(--ink-2);
+    overflow: clip;
   }
   .v4-venue .stage {
     position: sticky; top: 0;
