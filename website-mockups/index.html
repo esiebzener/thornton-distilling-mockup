@@ -791,10 +791,12 @@
      STILLHOUSE — Spirits teaser (Option A: sticky stage + word stagger)
      ============================================================= */
 
-  /* Section is taller than viewport so the inner .stage can pin while words reveal */
+  /* Section is taller than viewport so the inner .stage can pin while words reveal.
+     Tuned to 150vh so word stagger has 50vh of scroll travel — long enough to feel
+     deliberate but no dead space below. */
   .v4-stillhouse {
     position: relative;
-    height: 220vh;
+    height: 150vh;
     background: var(--ink-2);
   }
   .v4-stillhouse .stage {
@@ -847,7 +849,7 @@
     z-index: 3;
     margin-left: auto;
     max-width: 720px;
-    padding: clamp(80px, 10vh, 140px) clamp(40px, 6vw, 100px);
+    padding: clamp(40px, 6vh, 80px) clamp(40px, 6vw, 100px);
     display: flex; flex-direction: column; justify-content: center;
   }
   .v4-stillhouse .rule {
@@ -972,7 +974,7 @@
 
   .v4-table {
     position: relative;
-    height: 200vh;
+    height: 130vh;
     background: var(--ink-2);
   }
   .v4-table .stage {
@@ -1000,7 +1002,7 @@
   .v4-table .roman-bg { top: 8%; right: 1%; z-index: 2; }
   .v4-table .t-inner {
     position: relative; z-index: 3;
-    padding: clamp(80px, 10vh, 140px) clamp(40px, 8vw, 140px);
+    padding: clamp(40px, 6vh, 80px) clamp(40px, 8vw, 140px);
     max-width: 720px;
     display: flex; flex-direction: column; justify-content: center;
   }
@@ -1075,7 +1077,7 @@
      for the R-L-R zigzag rhythm (Spirits: R, Table: L, Events: R). */
   .v4-venue {
     position: relative;
-    height: 220vh;
+    height: 150vh;
     background: var(--ink-2);
   }
   .v4-venue .stage {
@@ -1118,7 +1120,7 @@
     z-index: 3;
     margin-left: auto;
     max-width: 720px;
-    padding: clamp(80px, 10vh, 140px) clamp(40px, 6vw, 100px);
+    padding: clamp(40px, 6vh, 80px) clamp(40px, 6vw, 100px);
     display: flex; flex-direction: column; justify-content: center;
   }
   .v4-venue .rule {
@@ -2292,9 +2294,9 @@
     const isDesktop = () => window.matchMedia('(min-width: 901px)').matches;
     const sections = Array.from(document.querySelectorAll('.stickyfx'));
     if (!sections.length) return;
-    // Thresholds chosen so words reveal smoothly through the first ~half of section travel,
-    // then the rest of the content lands together once the headline is fully built.
-    const STEPS = [0.05, 0.18, 0.30, 0.42];
+    // Thresholds chosen for tighter sections (~50vh of pinned scroll travel) — words reveal
+    // earlier and stagger across the first half, content lands by 65%.
+    const STEPS = [0.08, 0.22, 0.38, 0.55];
     let raf = 0;
     function update() {
       raf = 0;
