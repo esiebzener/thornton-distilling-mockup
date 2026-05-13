@@ -1736,20 +1736,10 @@
       scroll-behavior: auto !important;
     }
     .v4-mdoor .m-photo { animation: none; }
-    /* Force scroll-tied reveals to be visible when motion is reduced */
-    .v4-stillhouse h2 .word,
-    .v4-table h2 .word,
-    .v4-venue h2 .word,
-    .v4-stillhouse .rule,
-    .v4-table .rule,
-    .v4-venue .rule,
-    .v4-stillhouse .copy > p,
-    .v4-stillhouse .copy > .v4-bottles,
-    .v4-stillhouse .copy > .v4-cta-row,
-    .v4-table p,
-    .v4-table .t-inner > .v4-cta-row,
-    .v4-venue .copy > p,
-    .v4-venue .copy > .v4-cta-row { opacity: 1 !important; transform: none !important; }
+    /* NOTE: We intentionally do NOT force the scroll-tied word/content reveals visible.
+       The global `transition-duration: 0.01ms !important` above already makes the reveals
+       happen instantly without smooth motion, which respects the user's motion preference.
+       Forcing opacity:1 would defeat the entire scroll-tied animation. */
   }
   </style>
 </head>
