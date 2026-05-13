@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Thornton Distilling Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-form-wrap {
+      max-width: 640px;
+      margin: 30px auto 0;
+      text-align: left;
+    }
+    .contact-form-wrap label {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .contact-form-wrap input,
+    .contact-form-wrap textarea,
+    .contact-form-wrap select {
+      width: 100%;
+      padding: 12px 14px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      color: var(--ink);
+      background: var(--cream-light);
+      border: 1px solid rgba(31, 61, 47, 0.25);
+      border-bottom: 1px solid var(--gold);
+      border-radius: 0;
+      margin-bottom: 22px;
+    }
+    .contact-form-wrap textarea { min-height: 130px; resize: vertical; }
+    .contact-form-wrap input:focus,
+    .contact-form-wrap textarea:focus,
+    .contact-form-wrap select:focus {
+      outline: none;
+      border-color: var(--forest);
+      border-bottom-color: var(--forest);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .contact-form-submit {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      background: var(--forest);
+      color: var(--cream-light);
+      padding: 16px 36px;
+      border: none;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    .contact-form-submit:hover { background: var(--forest-deep); }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; gap: 0; } }
+  </style>
+</head>
+<body>
+
+<header class="site-header cream">
+  <nav class="subpage-nav">
+    <a href="spirits/index.html">I · Spirits</a>
+    <a href="restaurant/index.html">II · Dine</a>
+    <a href="events/index.html">III · Events</a>
+  </nav>
+  <a class="crest" href="index.html">
+    <img class="crest-illustration" src="assets/landscape-clean.png" alt="">
+    <div class="crest-main">Thornton Distilling</div>
+    <div class="crest-bottom">Est. 1857 · Thornton, Illinois</div>
+  </a>
+  <a class="reserve-btn" href="reserve.html">Reserve</a>
+</header>
+
+<section class="bold-hero" style="min-height: calc(60vh - 80px);">
+  <div class="bold-hero-inner">
+    <div class="bold-hero-eyebrow">Get in Touch</div>
+    <h1 class="bold-hero-headline" style="font-size: clamp(48px, 7vw, 116px);">
+      DROP US A LINE.
+      <span class="italic">We'll write back.</span>
+    </h1>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="section-eyebrow">Reach the Distillery</div>
+  <h2>How can we <em>help?</em></h2>
+
+  <div class="detail-grid three">
+    <div class="detail-card">
+      <h3>General</h3>
+      <p>
+        Questions, press, partnerships, or just want to say hello.<br><br>
+        <a href="mailto:info@thorntondistilling.com">info@thorntondistilling.com</a><br>
+        <a href="tel:+17085551857">(708) 555-1857</a>
+      </p>
+    </div>
+    <div class="detail-card">
+      <h3>Restaurant &amp; Reservations</h3>
+      <p>
+        Walk-ins welcome. Parties of 6+ should reserve in advance.<br><br>
+        <a href="reserve.html">Reserve a table →</a><br>
+        <a href="mailto:dine@thorntondistilling.com">dine@thorntondistilling.com</a>
+      </p>
+    </div>
+    <div class="detail-card">
+      <h3>Events &amp; Weddings</h3>
+      <p>
+        Inquire about dates, packages, and tours of the venue.<br><br>
+        <a href="events/index.html">Plan an event →</a><br>
+        <a href="mailto:events@thorntondistilling.com">events@thorntondistilling.com</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="contact-form-wrap">
+    <form onsubmit="event.preventDefault(); alert('Thanks — we\\'ll be in touch.');">
+      <div class="form-row">
+        <div>
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" required>
+        </div>
+        <div>
+          <label for="cf-email">Email</label>
+          <input id="cf-email" name="email" type="email" required>
+        </div>
+      </div>
+      <label for="cf-subject">Subject</label>
+      <select id="cf-subject" name="subject">
+        <option>General Inquiry</option>
+        <option>Restaurant &amp; Reservations</option>
+        <option>Events &amp; Weddings</option>
+        <option>Spirits — Find Dead Drop</option>
+        <option>Spirits — Wholesale / Distribution</option>
+        <option>Spirits — Private Labeling</option>
+        <option>Press / Media</option>
+      </select>
+      <label for="cf-message">Message</label>
+      <textarea id="cf-message" name="message" required></textarea>
+      <button class="contact-form-submit" type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer cream">
+  ✦ &nbsp; Built 1857 &nbsp; <em>·</em> &nbsp; Seized &nbsp; <em>·</em> &nbsp; Raided &nbsp; <em>·</em> &nbsp; Reborn &nbsp; ✦
+  <span class="address">400 E Margaret St · Thornton, IL 60476 · Please Drink Responsibly</span>
+</footer>
+
+<script src="asm-popup.js" data-base="" data-release="2026-12-05T00:00:00"></script>
+
+</body>
+</html>

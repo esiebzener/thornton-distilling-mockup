@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spirits — Thornton Distilling Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body style="background: var(--ink);">
+
+<header class="site-header dark" style="position: absolute; top: 0; left: 0; right: 0; z-index: 50; background: linear-gradient(180deg, rgba(20,14,10,0.7), transparent); border-bottom-color: transparent;">
+  <nav class="subpage-nav">
+    <a class="active" href="index.html">I · Spirits</a>
+    <a href="../restaurant/index.html">II · Dine</a>
+    <a href="../events/index.html">III · Events</a>
+  </nav>
+  <a class="crest" href="../index.html">
+    <img class="crest-illustration" src="../assets/landscape-clean.png" alt="">
+    <div class="crest-main">Thornton Distilling</div>
+    <div class="crest-bottom">Est. 1857 · Thornton, Illinois</div>
+  </a>
+  <a class="reserve-btn" href="../reserve.html">Reserve</a>
+</header>
+
+<section class="photo-hero" id="hero">
+  <div class="photo-hero-bg" id="hero-bg"></div>
+  <div class="photo-hero-overlay"></div>
+  <div class="photo-hero-content">
+    <h1>
+      Seized. Raided. Reborn.
+      <em>Illinois' oldest standing brewery, distilling again.</em>
+    </h1>
+    <p class="photo-hero-substory">
+      One historic brewery. One artesian well. Two spirits brands — one craft, one single malt.
+    </p>
+  </div>
+</section>
+
+<section class="spirits-split">
+  <div class="spirits-split-header">
+    <div class="eyebrow">Two Brands · One Distillery</div>
+    <h2>Choose what's in <em>the glass.</em></h2>
+    <p>Dead Drop is our craft line. American Single Malt is our flagship whisky.</p>
+  </div>
+
+  <div class="spirits-split-grid">
+    <a class="brand-card dead-drop" href="dead-drop/index.html">
+      <div class="brand-eyebrow">Craft Spirits</div>
+      <h3>Dead Drop<em>Bourbon · Gin · Rum · Vodka · Absinthe</em></h3>
+      <p>Our Prohibition-named craft line, distilled and aged on site. Bourbon, gin, rum, vodka, and absinthe — including a Kosher-for-Passover certified series.</p>
+      <span class="brand-enter">Explore Dead Drop →</span>
+    </a>
+
+    <a class="brand-card single-malt" href="single-malt/index.html">
+      <div class="brand-eyebrow">Our American Single Malt</div>
+      <h3>American Single Malt<em>by Thornton Distilling Co.</em></h3>
+      <p>The first craft-malt-certified single malt of the American Prairie. Drawn from the artesian well, malted from Illinois grain. <em>Signature Malt · Prairie Peat · Single Cask.</em></p>
+      <span class="brand-enter">Explore the Single Malt →</span>
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer dark">
+  ✦ &nbsp; Built 1857 &nbsp; <em>·</em> &nbsp; Seized &nbsp; <em>·</em> &nbsp; Raided &nbsp; <em>·</em> &nbsp; Reborn &nbsp; ✦
+  <span class="address">400 E Margaret St · Thornton, IL 60476 · Please Drink Responsibly</span>
+</footer>
+
+<script src="../asm-popup.js" data-base="../" data-release="2026-12-05T00:00:00"></script>
+
+<script>
+/* Gentle parallax on the bottle photo as user scrolls */
+(function () {
+  const bg = document.getElementById('hero-bg');
+  const hero = document.getElementById('hero');
+  if (!bg || !hero) return;
+  let ticking = false;
+  function update() {
+    const rect = hero.getBoundingClientRect();
+    if (rect.bottom < 0 || rect.top > window.innerHeight) {
+      ticking = false;
+      return;
+    }
+    const p = -rect.top / hero.offsetHeight;
+    const shift = p * 80;
+    const scale = 1 + p * 0.06;
+    bg.style.transform = `translateY(${shift}px) scale(${scale})`;
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  update();
+})();
+</script>
+
+</body>
+</html>
