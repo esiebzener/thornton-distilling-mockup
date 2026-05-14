@@ -828,9 +828,9 @@
   .v4-stillhouse h2 {
     font-family: 'Fraunces', 'Playfair Display', serif;
     font-weight: 500; font-style: italic;
-    font-size: clamp(46px, 5.6vw, 88px);
-    line-height: 1.18; letter-spacing: -0.028em;
-    margin: 0 0 38px;
+    font-size: clamp(40px, 5.0vw, 74px);
+    line-height: 1.05; letter-spacing: -0.028em;
+    margin: 0 0 26px;
     font-variation-settings: "opsz" 144, "SOFT" 50;
   }
   .v4-stillhouse h2 .word {
@@ -838,7 +838,6 @@
     opacity: 0;
     transform: translateY(48px);
     transition: opacity 1s ease, transform 1.1s cubic-bezier(.2,.7,.2,1);
-    margin-bottom: 6px;
   }
   .v4-stillhouse h2 .word.strong {
     color: var(--gold-bright);
@@ -983,9 +982,9 @@
   .v4-table h2 {
     font-family: 'Fraunces', 'Playfair Display', serif;
     font-weight: 500; font-style: italic;
-    font-size: clamp(46px, 5.8vw, 92px);
-    line-height: 1.18; letter-spacing: -0.028em;
-    margin: 0 0 38px;
+    font-size: clamp(40px, 5.2vw, 78px);
+    line-height: 1.05; letter-spacing: -0.028em;
+    margin: 0 0 26px;
     font-variation-settings: "opsz" 144, "SOFT" 50;
   }
   .v4-table h2 .word {
@@ -993,7 +992,6 @@
     opacity: 0;
     transform: translateY(48px);
     transition: opacity 1s ease, transform 1.1s cubic-bezier(.2,.7,.2,1);
-    margin-bottom: 6px;
   }
   .v4-table h2 .word.strong {
     color: var(--gold-bright);
@@ -1102,9 +1100,9 @@
   .v4-venue h2 {
     font-family: 'Fraunces', 'Playfair Display', serif;
     font-weight: 500; font-style: italic;
-    font-size: clamp(46px, 5.6vw, 88px);
-    line-height: 1.18; letter-spacing: -0.028em;
-    margin: 0 0 38px;
+    font-size: clamp(40px, 5.0vw, 74px);
+    line-height: 1.05; letter-spacing: -0.028em;
+    margin: 0 0 26px;
     font-variation-settings: "opsz" 144, "SOFT" 50;
   }
   .v4-venue h2 .word {
@@ -1112,7 +1110,6 @@
     opacity: 0;
     transform: translateY(48px);
     transition: opacity 1s ease, transform 1.1s cubic-bezier(.2,.7,.2,1);
-    margin-bottom: 6px;
   }
   .v4-venue h2 .word.strong {
     color: var(--gold-bright);
@@ -2167,12 +2164,12 @@
       return;
     }
 
-    const morphRange = vh * 1.10;   // px scroll over which morph happens — longer = smoother
+    const morphRange = vh * 2.0;    // px scroll over which morph happens — doubled so morph is always visible even on fast scroll
     const raw = Math.max(0, Math.min(1, y / morphRange));
-    // ease-in-out-quint — very gentle on both ends, smooth glide through middle
+    // ease-in-out-quad — gentler middle, progresses steadily, never skips
     const p = raw < 0.5
-      ? 16 * raw * raw * raw * raw * raw
-      : 1 - Math.pow(-2 * raw + 2, 5) / 2;
+      ? 2 * raw * raw
+      : 1 - Math.pow(-2 * raw + 2, 2) / 2;
 
     // Hero text fade
     body.style.setProperty('--hero-fade', Math.min(1, y / (vh * 0.40)).toFixed(3));
