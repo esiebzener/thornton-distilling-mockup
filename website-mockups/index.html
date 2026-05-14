@@ -1777,7 +1777,7 @@
     will-change: transform, opacity;
   }
   .v4-door-anchor svg { width: 100%; height: 100%; display: block; }
-  body.shelf-on .v4-door-anchor { opacity: 0; }
+  body.is-past-morph .v4-door-anchor { opacity: 0; }
   @media (prefers-reduced-motion: reduce) {
     .v4-door-anchor { transition: none; }
   }
@@ -2237,6 +2237,10 @@
 
     // Hero text fade
     body.style.setProperty('--hero-fade', Math.min(1, y / (vh * 0.40)).toFixed(3));
+
+    // Past-morph fade for door-anchor logo
+    if (y > vh * 1.15) body.classList.add('is-past-morph');
+    else body.classList.remove('is-past-morph');
 
     // Shelf reveal
     if (y > 60) body.classList.add('shelf-on'); else body.classList.remove('shelf-on');
