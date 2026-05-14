@@ -612,7 +612,7 @@
      step-by-step on scroll (headline → lede → each chapter in sequence). */
   .v4-archive {
     position: relative;
-    height: 200vh;
+    height: 280vh;
     background:
       radial-gradient(ellipse 80% 50% at 50% 0%, rgba(31, 61, 47, 0.22) 0%, transparent 70%),
       linear-gradient(180deg, #0c0907 0%, #15100c 100%);
@@ -778,7 +778,7 @@
      containing block that would break the inner .stage's position:sticky. */
   .v4-stillhouse {
     position: relative;
-    height: 200vh;
+    height: 280vh;
     background: var(--ink-2);
     overflow: clip;
   }
@@ -957,7 +957,7 @@
 
   .v4-table {
     position: relative;
-    height: 200vh;
+    height: 280vh;
     background: var(--ink-2);
     overflow: clip;
   }
@@ -1061,7 +1061,7 @@
      for the R-L-R zigzag rhythm (Spirits: R, Table: L, Events: R). */
   .v4-venue {
     position: relative;
-    height: 200vh;
+    height: 280vh;
     background: var(--ink-2);
     overflow: clip;
   }
@@ -2338,7 +2338,7 @@
     const isDesktop = () => window.matchMedia('(min-width: 901px)').matches;
     const sections = Array.from(document.querySelectorAll('.stickyfx'));
     if (!sections.length) return;
-    const STEPS = [0.05, 0.20, 0.35, 0.50, 0.65, 0.80];
+    const STEPS = [0.05, 0.22, 0.39, 0.56, 0.73, 0.88];
     let raf = 0;
     function update() {
       raf = 0;
