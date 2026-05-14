@@ -2300,7 +2300,7 @@
     const isDesktop = () => window.matchMedia('(min-width: 901px)').matches;
     const sections = Array.from(document.querySelectorAll('.stickyfx'));
     if (!sections.length) return;
-    const STEPS = [0.05, 0.12, 0.20, 0.28, 0.36, 0.44];
+    const STEPS = [0.05, 0.20, 0.35, 0.50, 0.65, 0.80];
     let raf = 0;
     function update() {
       raf = 0;
