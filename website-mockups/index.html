@@ -604,7 +604,7 @@
      step-by-step on scroll (headline → lede → each chapter in sequence). */
   .v4-archive {
     position: relative;
-    height: 320vh;
+    height: 200vh;
     background:
       radial-gradient(ellipse 80% 50% at 50% 0%, rgba(31, 61, 47, 0.22) 0%, transparent 70%),
       linear-gradient(180deg, #0c0907 0%, #15100c 100%);
@@ -644,8 +644,8 @@
   }
   .v4-archive-head .lede {
     font-size: clamp(15px, 1.1vw, 18px);
-    line-height: 1.65; color: rgba(248, 240, 220, 0.74);
-    font-style: italic; margin: 0; max-width: 640px; margin-inline: auto;
+    line-height: 1.65; color: rgba(248, 240, 220, 0.85);
+    font-style: italic; margin: 0; max-width: 560px; margin-inline: auto;
     opacity: 0; transform: translateY(24px);
     transition: opacity .9s ease, transform 1s cubic-bezier(.2,.7,.2,1);
   }
@@ -691,7 +691,7 @@
   .v4-chap .c-frame { position: relative; }
   .v4-chap .tape {
     position: absolute;
-    top: -9px; width: 76px; height: 22px;
+    top: 18px; width: 76px; height: 24px; box-shadow: 0 3px 8px rgba(0,0,0,0.42);
     background:
       linear-gradient(180deg, rgba(248,232,190,0.62) 0%, rgba(232,210,160,0.50) 45%, rgba(212,188,135,0.42) 100%),
       repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, rgba(0,0,0,0.04) 1px, rgba(0,0,0,0.04) 3px);
@@ -763,7 +763,7 @@
      containing block that would break the inner .stage's position:sticky. */
   .v4-stillhouse {
     position: relative;
-    height: 320vh;
+    height: 200vh;
     background: var(--ink-2);
     overflow: clip;
   }
@@ -828,9 +828,9 @@
   .v4-stillhouse h2 {
     font-family: 'Fraunces', 'Playfair Display', serif;
     font-weight: 500; font-style: italic;
-    font-size: clamp(40px, 5.0vw, 74px);
-    line-height: 1.05; letter-spacing: -0.028em;
-    margin: 0 0 26px;
+    font-size: clamp(50px, 6.25vw, 92px);
+    line-height: 1.08; letter-spacing: -0.028em;
+    margin: 0 0 30px;
     font-variation-settings: "opsz" 144, "SOFT" 50;
   }
   .v4-stillhouse h2 .word {
@@ -942,7 +942,7 @@
 
   .v4-table {
     position: relative;
-    height: 300vh;
+    height: 200vh;
     background: var(--ink-2);
     overflow: clip;
   }
@@ -982,9 +982,9 @@
   .v4-table h2 {
     font-family: 'Fraunces', 'Playfair Display', serif;
     font-weight: 500; font-style: italic;
-    font-size: clamp(40px, 5.2vw, 78px);
-    line-height: 1.05; letter-spacing: -0.028em;
-    margin: 0 0 26px;
+    font-size: clamp(50px, 6.5vw, 96px);
+    line-height: 1.08; letter-spacing: -0.028em;
+    margin: 0 0 30px;
     font-variation-settings: "opsz" 144, "SOFT" 50;
   }
   .v4-table h2 .word {
@@ -1046,7 +1046,7 @@
      for the R-L-R zigzag rhythm (Spirits: R, Table: L, Events: R). */
   .v4-venue {
     position: relative;
-    height: 320vh;
+    height: 200vh;
     background: var(--ink-2);
     overflow: clip;
   }
@@ -1100,9 +1100,9 @@
   .v4-venue h2 {
     font-family: 'Fraunces', 'Playfair Display', serif;
     font-weight: 500; font-style: italic;
-    font-size: clamp(40px, 5.0vw, 74px);
-    line-height: 1.05; letter-spacing: -0.028em;
-    margin: 0 0 26px;
+    font-size: clamp(50px, 6.25vw, 92px);
+    line-height: 1.08; letter-spacing: -0.028em;
+    margin: 0 0 30px;
     font-variation-settings: "opsz" 144, "SOFT" 50;
   }
   .v4-venue h2 .word {
@@ -1550,7 +1550,7 @@
   }
   .v4-panel p {
     font-size: 15.5px; line-height: 1.6;
-    color: rgba(248, 240, 220, 0.74); margin: 0 0 10px;
+    color: rgba(248, 240, 220, 0.85); margin: 0 0 10px;
   }
   .v4-panel p strong { color: var(--cream-light); font-weight: 500; }
   .v4-panel .row {
@@ -1721,7 +1721,33 @@
       transition-duration: 1s !important;
     }
   }
-  </style>
+  
+  /* ── Persistent section toggle (Spirits/Dine/Events) ── */
+  .v4-section-toggle {
+    position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 4px; padding: 5px;
+    background: rgba(14, 10, 7, 0.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(212, 175, 55, 0.28); border-radius: 999px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    z-index: 90; opacity: 0; pointer-events: none;
+    transition: opacity .5s ease, transform .5s ease;
+  }
+  .v4-section-toggle.show {
+    opacity: 1; pointer-events: auto;
+  }
+  .v4-st-btn {
+    padding: 10px 22px; font-family: 'Cinzel', serif;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--cream); text-decoration: none; border-radius: 999px;
+    transition: background .3s ease, color .3s ease;
+    min-height: 44px; display: inline-flex; align-items: center; cursor: pointer;
+  }
+  .v4-st-btn:hover { background: rgba(212, 175, 55, 0.14); color: var(--gold-bright); }
+  .v4-st-btn.active { background: var(--gold); color: var(--ink-1); font-weight: 600; }
+  @media (prefers-reduced-motion: reduce) {
+    .v4-section-toggle, .v4-st-btn { transition: none; }
+  }
+</style>
 </head>
 <body class="v4 doors-open">
 
@@ -2164,12 +2190,12 @@
       return;
     }
 
-    const morphRange = vh * 2.0;    // px scroll over which morph happens — doubled so morph is always visible even on fast scroll
+    const morphRange = vh * 0.85;   // px scroll over which morph happens
     const raw = Math.max(0, Math.min(1, y / morphRange));
-    // ease-in-out-quad — gentler middle, progresses steadily, never skips
+    // ease-in-out-cubic — visible, smooth, doesn't skip the middle
     const p = raw < 0.5
-      ? 2 * raw * raw
-      : 1 - Math.pow(-2 * raw + 2, 2) / 2;
+      ? 4 * raw * raw * raw
+      : 1 - Math.pow(-2 * raw + 2, 3) / 2;
 
     // Hero text fade
     body.style.setProperty('--hero-fade', Math.min(1, y / (vh * 0.40)).toFixed(3));
@@ -2389,5 +2415,45 @@
 })();
 </script>
 
+
+  <nav class="v4-section-toggle" aria-label="Section navigation">
+    <a href="#v4-stillhouse" class="v4-st-btn" data-target="stillhouse">Spirits</a>
+    <a href="#v4-table" class="v4-st-btn" data-target="table">Dine</a>
+    <a href="#v4-venue" class="v4-st-btn" data-target="venue">Events</a>
+  </nav>
+
+  <script>
+  (() => {
+    const toggle = document.querySelector('.v4-section-toggle');
+    if (!toggle) return;
+    const btns = toggle.querySelectorAll('.v4-st-btn');
+    const sections = [['stillhouse', '.v4-stillhouse'], ['table', '.v4-table'], ['venue', '.v4-venue']];
+    btns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = btn.dataset.target;
+        const el = document.querySelector('.v4-' + target);
+        if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY, behavior: 'smooth' });
+      });
+    });
+    let raf = null;
+    const update = () => {
+      const showThreshold = window.innerHeight * 1.4;
+      toggle.classList.toggle('show', window.scrollY > showThreshold);
+      const middleY = window.scrollY + window.innerHeight / 2;
+      let active = null;
+      for (const [name, sel] of sections) {
+        const el = document.querySelector(sel);
+        if (!el) continue;
+        const top = el.getBoundingClientRect().top + window.scrollY;
+        const bottom = top + el.offsetHeight;
+        if (middleY >= top && middleY < bottom) { active = name; break; }
+      }
+      btns.forEach(b => b.classList.toggle('active', b.dataset.target === active));
+    };
+    window.addEventListener('scroll', () => { if (raf) return; raf = requestAnimationFrame(() => { raf = null; update(); }); }, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>
