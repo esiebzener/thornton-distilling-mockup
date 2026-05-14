@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thornton Distilling Co. ÃÂ¢ÃÂÃÂ Illinois' Oldest Standing Brewery, Reborn</title>
+  <title>Thornton Distilling Co. — Illinois' Oldest Standing Brewery, Reborn</title>
   <meta name="description" content="A working distillery, restaurant, and event house inside the same limestone walls on the same artesian water since 1857.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="styles.css">
   <style>
   /* =============================================================
-     HOMEPAGE v4 ÃÂ¢ÃÂÃÂ Thornton Distilling
+     HOMEPAGE v4 — Thornton Distilling
      Door-to-pill scroll morph. Cleaner identity.
      ============================================================= */
 
@@ -31,7 +31,7 @@
     --brick:      #6E2A1F;
     --stamp:      #8C2D1F;
 
-    /* Door morph constants ÃÂ¢ÃÂÃÂ used by both CSS and JS */
+    /* Door morph constants — used by both CSS and JS */
     --pill-w:    110px;
     --pill-h:    32px;
     --pill-gap:  28px;
@@ -54,7 +54,7 @@
   body.v4 { --hero-fade: 0; }
 
   /* ===========================================================
-     SCROLL-DRIVEN ANIMATIONS ÃÂ¢ÃÂÃÂ Apple-style parallax / reveals
+     SCROLL-DRIVEN ANIMATIONS — Apple-style parallax / reveals
      Uses modern animation-timeline: view() in Chromium 115+.
      Falls back to static rendering in older browsers.
      =========================================================== */
@@ -73,7 +73,7 @@
       to   { transform: translateY(-50%) translateY(-60px); }
     }
 
-    /* Chapter timeline photos ÃÂ¢ÃÂÃÂ gentle zoom-in as they enter view */
+    /* Chapter timeline photos — gentle zoom-in as they enter view */
     .v4-chap .c-img {
       animation: chap-enter linear both;
       animation-timeline: view();
@@ -84,7 +84,7 @@
       to   { transform: translateY(0)    scale(1);    opacity: 1; }
     }
 
-    /* Bottle cards ÃÂ¢ÃÂÃÂ pop up as the spirits row enters view */
+    /* Bottle cards — pop up as the spirits row enters view */
     .v4-bottle {
       animation: bottle-enter linear both;
       animation-timeline: view();
@@ -98,7 +98,7 @@
       to   { transform: translateY(0);    opacity: 1; }
     }
 
-    /* Section headlines ÃÂ¢ÃÂÃÂ subtle scale-in on view entry */
+    /* Section headlines — subtle scale-in on view entry */
     .v4-section h2 {
       animation: head-scale linear both;
       animation-timeline: view();
@@ -111,7 +111,7 @@
 
   }
 
-  /* Cursor-tracked gold glow ÃÂ¢ÃÂÃÂ adds a soft warm halo wherever the mouse is.
+  /* Cursor-tracked gold glow — adds a soft warm halo wherever the mouse is.
      Uses ::after to avoid colliding with sections that use ::before for overlays. */
   .cursor-glow {
     position: relative;
@@ -166,7 +166,7 @@
   .v4 .reveal.is-in { opacity: 1; transform: translateY(0); }
 
   /* =============================================================
-     COUNTDOWN BANNER ÃÂ¢ÃÂÃÂ top of page
+     COUNTDOWN BANNER — top of page
      ============================================================= */
 
   .v4-banner {
@@ -278,7 +278,7 @@
     font-size: 13px; letter-spacing: 0.15em;
   }
 
-  /* Slot placeholders ÃÂ¢ÃÂÃÂ invisible; doors morph onto these positions */
+  /* Slot placeholders — invisible; doors morph onto these positions */
   .v4-shelf .s-slots {
     position: relative;
     display: flex;
@@ -378,7 +378,7 @@
     background: var(--gold); color: var(--forest-deep); border-color: var(--gold);
   }
 
-  /* Centered hero tagline ÃÂ¢ÃÂÃÂ slim, above the doors */
+  /* Centered hero tagline — slim, above the doors */
   .v4-hero-mid {
     position: relative; z-index: 5;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -412,7 +412,7 @@
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  /* Hero slot ÃÂ¢ÃÂÃÂ JS reads its bounding rect for the door START positions. */
+  /* Hero slot — JS reads its bounding rect for the door START positions. */
   .v4-hero-slots {
     position: relative;
     flex: 1;
@@ -445,7 +445,7 @@
   }
 
   /* =============================================================
-     THE MORPHING DOORS ÃÂ¢ÃÂÃÂ fixed position, JS-driven
+     THE MORPHING DOORS — fixed position, JS-driven
      ============================================================= */
 
   .v4-mdoor {
@@ -462,7 +462,7 @@
     will-change: top, left, width, height;
     display: flex; align-items: center; justify-content: center;
   }
-  /* Active-section underline ÃÂ¢ÃÂÃÂ gold rule appears below the pill at p=1 */
+  /* Active-section underline — gold rule appears below the pill at p=1 */
   .v4-mdoor::after {
     content: '';
     position: absolute;
@@ -481,7 +481,7 @@
     background-size: cover; background-position: center;
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 22%, black 78%, transparent 100%);
             mask-image: linear-gradient(90deg, transparent 0%, black 22%, black 78%, transparent 100%);
-    /* Linear fade over morph ÃÂ¢ÃÂÃÂ visible at p=0.5, gone at p=1 */
+    /* Linear fade over morph — visible at p=0.5, gone at p=1 */
     opacity: calc(1 - var(--p, 0));
     filter: saturate(calc(1 + var(--p, 0) * 0.4)) brightness(calc(1 + var(--p, 0) * 0.2));
     animation: door-ken 26s ease-in-out infinite alternate;
@@ -506,7 +506,7 @@
     opacity: calc(0.9 - var(--p, 0) * 1.0);
   }
 
-  /* Headline ÃÂ¢ÃÂÃÂ smoothly scales + repositions from hero to shelf via --p.
+  /* Headline — smoothly scales + repositions from hero to shelf via --p.
      Style matches the original door headline: bold Playfair, not italic.
      Hero state: left-aligned near bottom (matches original layout).
      Shelf state: centered in pill area. */
@@ -523,7 +523,7 @@
     line-height: 0.9;
     white-space: nowrap;
     pointer-events: none;
-    /* Smooth interpolation: large ÃÂ¢ÃÂÃÂ small, just-above-sub ÃÂ¢ÃÂÃÂ center.
+    /* Smooth interpolation: large → small, just-above-sub → center.
        Hero `top` is calc(100% - 282px) so the headline sits a FIXED distance
        above the sub no matter how tall the door is. */
     font-size: calc(94px - var(--p, 0) * 80px);
@@ -534,13 +534,13 @@
     transform: translate(calc(var(--p, 0) * -50%), -50%);
   }
 
-  /* Secondary content ÃÂ¢ÃÂÃÂ eyebrow, sub, step ÃÂ¢ÃÂÃÂ fades out as morph progresses */
+  /* Secondary content — eyebrow, sub, step — fades out as morph progresses */
   .v4-mdoor .m-content {
     position: absolute; inset: 0;
     pointer-events: none;
     opacity: calc(1 - var(--p, 0) * 1.8);
   }
-  /* Door content (bottom-up): eyebrow (small label) ÃÂ¢ÃÂÃÂ step (CTA) ÃÂ¢ÃÂÃÂ sub ÃÂ¢ÃÂÃÂ headline (above, via .d-headline) */
+  /* Door content (bottom-up): eyebrow (small label) → step (CTA) → sub → headline (above, via .d-headline) */
   .v4-mdoor .m-content .d-eyebrow {
     position: absolute;
     bottom: 30px;
@@ -572,13 +572,13 @@
     color: rgba(248, 240, 220, 0.8);
   }
 
-  /* Hover state ÃÂ¢ÃÂÃÂ only at p < 0.5 (door state) */
+  /* Hover state — only at p < 0.5 (door state) */
   body.doors-open .v4-mdoor:hover .m-photo { filter: brightness(1.10); transform: scale(1.05); }
   body.doors-open .v4-mdoor:hover .m-veil { opacity: 0.55; }
   body.doors-open .v4-mdoor:hover .m-content .d-step { gap: 18px; }
 
   /* =============================================================
-     SECTION SHELL ÃÂ¢ÃÂÃÂ used by teaser sections
+     SECTION SHELL — used by teaser sections
      ============================================================= */
 
   .v4-section {
@@ -596,147 +596,141 @@
   }
 
   /* =============================================================
-     THE ARCHIVE ÃÂ¢ÃÂÃÂ timeline
+     THE ARCHIVE — timeline
      ============================================================= */
 
+  /* Archive uses the same stickyfx pattern as Spirits/Dine/Events — section is
+     taller than viewport, inner .archive-stage is sticky-pinned, content reveals
+     step-by-step on scroll (headline → lede → each chapter in sequence). */
   .v4-archive {
-    padding: clamp(90px, 13vh, 160px) 0 clamp(70px, 10vh, 130px);
+    position: relative;
+    height: 320vh;
     background:
       radial-gradient(ellipse 80% 50% at 50% 0%, rgba(31, 61, 47, 0.22) 0%, transparent 70%),
       linear-gradient(180deg, #0c0907 0%, #15100c 100%);
+    overflow: clip;
   }
-  .v4-archive .grain    { opacity: 0.4; }
+  .v4-archive .archive-stage {
+    position: sticky; top: 0;
+    height: 100vh;
+    padding: clamp(60px, 8vh, 100px) 0 clamp(40px, 5vh, 70px);
+    display: flex; flex-direction: column;
+    overflow: hidden;
+  }
+  .v4-archive .grain    { opacity: 0.4; z-index: 1; }
   .v4-archive .halftone { display: none; }
 
   .v4-archive-head {
     text-align: center;
-    max-width: 820px; margin: 0 auto clamp(56px, 8vh, 96px);
+    max-width: 920px; margin: 0 auto clamp(28px, 4vh, 56px);
     padding: 0 24px;
     position: relative; z-index: 3;
   }
-  .v4-counter {
-    display: inline-flex; align-items: baseline; gap: 18px;
-    font-family: 'Playfair Display', serif; font-style: italic;
-    margin-bottom: 22px;
-    color: var(--gold-bright);
-  }
-  .v4-counter .num {
-    font-size: clamp(56px, 8vw, 110px);
-    font-weight: 900; font-style: italic;
-    line-height: 1; letter-spacing: -0.02em;
-  }
-  .v4-counter .label {
-    font-size: clamp(13px, 1vw, 16px);
-    letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--gold); font-style: normal;
-    font-family: 'Cinzel', serif;
-  }
+  .v4-archive-head .rule { opacity: 0; transition: opacity .8s ease; }
   .v4-archive-head h2 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400; font-style: italic;
-    font-size: clamp(36px, 4.8vw, 64px);
-    line-height: 1.05; letter-spacing: -0.012em;
-    margin: 10px 0 18px;
+    font-family: 'Fraunces', 'Playfair Display', serif;
+    font-weight: 500; font-style: italic;
+    font-size: clamp(34px, 4.2vw, 62px);
+    line-height: 1.16; letter-spacing: -0.018em;
+    margin: 16px 0 22px;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
   }
-  .v4-archive-head h2 strong {
-    color: var(--gold-bright); font-style: normal; font-weight: 900;
+  .v4-archive-head h2 strong { color: var(--gold-bright); font-style: normal; font-weight: 800; }
+  .v4-archive-head h2 .word {
+    display: block;
+    opacity: 0; transform: translateY(38px);
+    transition: opacity 1s ease, transform 1.1s cubic-bezier(.2,.7,.2,1);
+    margin-bottom: 4px;
   }
   .v4-archive-head .lede {
-    font-size: clamp(16px, 1.2vw, 19px);
-    line-height: 1.65; color: rgba(248, 240, 220, 0.72);
+    font-size: clamp(15px, 1.1vw, 18px);
+    line-height: 1.65; color: rgba(248, 240, 220, 0.74);
     font-style: italic; margin: 0; max-width: 640px; margin-inline: auto;
+    opacity: 0; transform: translateY(24px);
+    transition: opacity .9s ease, transform 1s cubic-bezier(.2,.7,.2,1);
   }
 
-  /* Chapter grid ÃÂ¢ÃÂÃÂ polaroids w/ tape ABOVE the photo */
+  .v4-archive.is-step-1 .v4-archive-head .rule { opacity: 1; }
+  .v4-archive.is-step-1 .v4-archive-head h2 .word.w-1 { opacity: 1; transform: translateY(0); }
+  .v4-archive.is-step-2 .v4-archive-head h2 .word.w-2 { opacity: 1; transform: translateY(0); }
+  .v4-archive.is-step-3 .v4-archive-head .lede { opacity: 1; transform: translateY(0); }
+
   .v4-chapters {
     display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: clamp(28px, 2.4vw, 48px);
-    padding: 0 clamp(36px, 6vw, 100px);
+    gap: clamp(20px, 2vw, 38px);
+    padding: 0 clamp(28px, 5vw, 80px);
     position: relative; z-index: 3;
+    flex: 1; align-items: start; min-height: 0;
   }
   .v4-chap {
     position: relative;
-    padding: 26px 22px 28px;
-    background: transparent;
-    border: none;
+    padding: 14px 12px 16px;
+    background: transparent; border: none;
+    opacity: 0; transform: translateY(36px);
+    transition: opacity 1s ease, transform 1.1s cubic-bezier(.2,.7,.2,1);
   }
+  .v4-archive.is-step-4 .v4-chap.c-1 { opacity: 1; transform: translateY(0); }
+  .v4-archive.is-step-5 .v4-chap.c-2 { opacity: 1; transform: translateY(0); }
+  .v4-archive.is-step-6 .v4-chap.c-3 { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+  .v4-archive.is-step-6 .v4-chap.c-4 { opacity: 1; transform: translateY(0); transition-delay: .18s; }
+
   .v4-chap .c-year {
-    font-family: 'Playfair Display', serif;
-    font-weight: 900; font-style: italic;
-    font-size: clamp(34px, 3.8vw, 56px);
+    font-family: 'Fraunces', 'Playfair Display', serif;
+    font-weight: 800; font-style: italic;
+    font-size: clamp(28px, 3vw, 46px);
     line-height: 1; margin: 0 0 4px;
-    color: var(--gold-bright);
-    letter-spacing: -0.01em;
+    color: var(--gold-bright); letter-spacing: -0.01em;
   }
   .v4-chap .c-verb {
     font-family: 'Cinzel', serif;
     text-transform: uppercase; letter-spacing: 0.4em;
-    font-size: 11px; color: var(--cream-light);
-    margin-bottom: 22px; display: block;
+    font-size: 10px; color: var(--cream-light);
+    margin-bottom: 16px; display: block;
   }
 
-  /* Tape strips sit ABOVE the photo ÃÂ¢ÃÂÃÂ pinning it like a polaroid */
-  .v4-chap .c-frame {
-    position: relative;
-  }
+  .v4-chap .c-frame { position: relative; }
   .v4-chap .tape {
     position: absolute;
-    top: 0;
-    width: 52px; height: 16px;
-    background: linear-gradient(135deg, rgba(232,210,160,0.32) 0%, rgba(212,179,119,0.20) 100%);
-    border-left: 1px solid rgba(232,210,160,0.5);
-    border-right: 1px solid rgba(232,210,160,0.5);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.35);
-    z-index: 3;
-    pointer-events: none;
+    top: -9px; width: 76px; height: 22px;
+    background:
+      linear-gradient(180deg, rgba(248,232,190,0.62) 0%, rgba(232,210,160,0.50) 45%, rgba(212,188,135,0.42) 100%),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, rgba(0,0,0,0.04) 1px, rgba(0,0,0,0.04) 3px);
+    background-blend-mode: overlay, normal;
+    box-shadow:
+      0 5px 9px rgba(0,0,0,0.55),
+      0 1px 0 rgba(0,0,0,0.30),
+      inset 0 1px 0 rgba(255,250,220,0.30),
+      inset 0 -1px 0 rgba(0,0,0,0.18);
+    z-index: 5; pointer-events: none; border-radius: 1px;
   }
-  .v4-chap .tape.l { left: 10%; transform: rotate(-9deg) translateY(-50%); }
-  .v4-chap .tape.r { right: 10%; transform: rotate(8deg) translateY(-50%); }
+  .v4-chap .tape::before, .v4-chap .tape::after {
+    content: ''; position: absolute; top: 0; bottom: 0; width: 4px;
+    background-image: radial-gradient(circle at 0 50%, transparent 2px, rgba(232,210,160,0.55) 2.5px);
+    background-size: 4px 4px;
+  }
+  .v4-chap .tape::before { left: -2px; }
+  .v4-chap .tape::after  { right: -2px; transform: scaleX(-1); }
+  .v4-chap .tape.l { left: 8%; transform: rotate(-9deg); }
+  .v4-chap .tape.r { right: 8%; transform: rotate(7deg); }
 
   .v4-chap .c-img {
-    position: relative; aspect-ratio: 4 / 3;
-    overflow: hidden;
-    background: var(--ink-3);
-    margin-bottom: 18px;
-    /* Subtle drop shadow gives photos that "sitting on a page" feel */
+    position: relative; aspect-ratio: 5 / 4;
+    overflow: hidden; background: var(--ink-3);
+    margin-bottom: 14px;
+    max-height: clamp(180px, 36vh, 320px);
     filter: drop-shadow(0 6px 14px rgba(0,0,0,0.55));
   }
-  /* Per-chapter unique torn-edge masks ÃÂ¢ÃÂÃÂ each photo "tears" differently */
   .v4-chap:nth-child(1) .c-img {
-    /* Top heavily torn, gentler sides */
-    clip-path: polygon(
-      2% 0%, 6% 2%, 11% 0.5%, 18% 3%, 26% 1%, 34% 2.5%, 42% 0.5%, 50% 3%, 58% 1%, 66% 2%, 74% 0.5%, 82% 2.5%, 90% 1%, 96% 2%, 99% 0.5%,
-      100% 5%, 99% 14%, 100% 25%, 99% 38%, 100% 52%, 99% 68%, 100% 82%, 99% 95%,
-      98% 100%, 88% 98%, 76% 99.5%, 62% 98%, 48% 99.5%, 34% 98.5%, 20% 99.5%, 8% 98%,
-      2% 100%, 0% 92%, 1% 78%, 0% 62%, 1% 46%, 0% 30%, 1% 16%
-    );
+    clip-path: polygon(2% 0%, 6% 2%, 11% 0.5%, 18% 3%, 26% 1%, 34% 2.5%, 42% 0.5%, 50% 3%, 58% 1%, 66% 2%, 74% 0.5%, 82% 2.5%, 90% 1%, 96% 2%, 99% 0.5%, 100% 5%, 99% 14%, 100% 25%, 99% 38%, 100% 52%, 99% 68%, 100% 82%, 99% 95%, 98% 100%, 88% 98%, 76% 99.5%, 62% 98%, 48% 99.5%, 34% 98.5%, 20% 99.5%, 8% 98%, 2% 100%, 0% 92%, 1% 78%, 0% 62%, 1% 46%, 0% 30%, 1% 16%);
   }
   .v4-chap:nth-child(2) .c-img {
-    /* Left side dramatically torn, like ripped from a book */
-    clip-path: polygon(
-      4% 1%, 12% 0.5%, 22% 1.5%, 32% 0.5%, 44% 1%, 56% 0.5%, 68% 1.5%, 80% 0.5%, 90% 1%, 97% 0.5%,
-      99.5% 6%, 99% 18%, 99.6% 32%, 99% 48%, 99.6% 64%, 99% 80%, 99.5% 94%,
-      96% 99%, 84% 98.5%, 70% 99.5%, 54% 98.5%, 38% 99.5%, 22% 98.5%, 10% 99%, 3% 98%,
-      1% 91%, 3% 78%, 0% 66%, 4% 54%, 0% 42%, 3% 30%, 1% 18%, 3% 8%
-    );
+    clip-path: polygon(4% 1%, 12% 0.5%, 22% 1.5%, 32% 0.5%, 44% 1%, 56% 0.5%, 68% 1.5%, 80% 0.5%, 90% 1%, 97% 0.5%, 99.5% 6%, 99% 18%, 99.6% 32%, 99% 48%, 99.6% 64%, 99% 80%, 99.5% 94%, 96% 99%, 84% 98.5%, 70% 99.5%, 54% 98.5%, 38% 99.5%, 22% 98.5%, 10% 99%, 3% 98%, 1% 91%, 3% 78%, 0% 66%, 4% 54%, 0% 42%, 3% 30%, 1% 18%, 3% 8%);
   }
   .v4-chap:nth-child(3) .c-img {
-    /* Right side torn aggressively */
-    clip-path: polygon(
-      3% 0.5%, 14% 1%, 26% 0.3%, 38% 1.5%, 50% 0.5%, 62% 1.2%, 74% 0.3%, 84% 1.5%, 93% 0.8%,
-      98% 4%, 96% 14%, 99% 28%, 95% 40%, 99% 52%, 96% 64%, 99% 78%, 96% 90%, 99% 98%,
-      94% 100%, 80% 99%, 64% 99.5%, 48% 98.5%, 32% 99.5%, 18% 98.5%, 6% 99%,
-      0.5% 92%, 1% 76%, 0.4% 60%, 1.2% 44%, 0.4% 28%, 1% 12%
-    );
+    clip-path: polygon(3% 0.5%, 14% 1%, 26% 0.3%, 38% 1.5%, 50% 0.5%, 62% 1.2%, 74% 0.3%, 84% 1.5%, 93% 0.8%, 98% 4%, 96% 14%, 99% 28%, 95% 40%, 99% 52%, 96% 64%, 99% 78%, 96% 90%, 99% 98%, 94% 100%, 80% 99%, 64% 99.5%, 48% 98.5%, 32% 99.5%, 18% 98.5%, 6% 99%, 0.5% 92%, 1% 76%, 0.4% 60%, 1.2% 44%, 0.4% 28%, 1% 12%);
   }
   .v4-chap:nth-child(4) .c-img {
-    /* Corners torn off, mostly clean middle */
-    clip-path: polygon(
-      5% 1%, 14% 3%, 24% 0.5%, 36% 1.5%, 48% 0.5%, 60% 1.5%, 72% 0.5%, 84% 1.5%, 94% 3%,
-      99% 6%, 98% 16%, 99.5% 30%, 99% 46%, 99.5% 62%, 99% 78%, 98% 92%,
-      94% 99%, 82% 97%, 68% 99.5%, 52% 97.5%, 38% 99.5%, 24% 97%, 12% 99.5%, 4% 97%,
-      1% 92%, 2.5% 78%, 0.5% 62%, 2% 46%, 0.5% 30%, 2% 14%, 1% 6%
-    );
+    clip-path: polygon(5% 1%, 14% 3%, 24% 0.5%, 36% 1.5%, 48% 0.5%, 60% 1.5%, 72% 0.5%, 84% 1.5%, 94% 3%, 99% 6%, 98% 16%, 99.5% 30%, 99% 46%, 99.5% 62%, 99% 78%, 98% 92%, 94% 99%, 82% 97%, 68% 99.5%, 52% 97.5%, 38% 99.5%, 24% 97%, 12% 99.5%, 4% 97%, 1% 92%, 2.5% 78%, 0.5% 62%, 2% 46%, 0.5% 30%, 2% 14%, 1% 6%);
   }
   .v4-chap .c-img img {
     width: 100%; height: 100%; object-fit: cover;
@@ -744,61 +738,32 @@
   }
   .v4-chap .c-img.anchor-top img { object-position: center top; }
   .v4-chap .c-img.contain img {
-    object-fit: contain;
-    background: var(--cream-light);
-    padding: 18px;
-    filter: none;
+    object-fit: contain; background: var(--cream-light);
+    padding: 18px; filter: none;
   }
   .v4-chap .c-img::after {
-    content: '';
-    position: absolute; inset: 0;
+    content: ''; position: absolute; inset: 0;
     background: linear-gradient(180deg, transparent 60%, rgba(11,8,6,0.45) 100%);
     pointer-events: none;
   }
   .v4-chap .c-copy {
-    font-size: 14.5px; line-height: 1.6;
+    font-size: 13.5px; line-height: 1.55;
     color: rgba(248, 240, 220, 0.78);
     font-style: italic; margin: 0;
   }
 
-  /* SEIZED / RAIDED stamp ephemera ÃÂ¢ÃÂÃÂ bigger, brighter red, percent-positioned */
-  .v4-chap .stamp {
-    position: absolute;
-    top: 32%; right: 6%;
-    z-index: 4;
-    transform: rotate(-13deg);
-    pointer-events: none;
-  }
-  .v4-chap .stamp .ring {
-    display: inline-block;
-    border: 2.5px solid #c83a2a;
-    color: #d04230;
-    padding: 8px 16px;
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: 15px;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    opacity: 0.92;
-    background: rgba(140,45,31,0.06);
-    box-shadow:
-      inset 0 0 0 1px rgba(208,66,48,0.4),
-      0 1px 2px rgba(0,0,0,0.4);
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-  }
-
   /* =============================================================
-     STILLHOUSE ÃÂ¢ÃÂÃÂ Spirits teaser (Option A: sticky stage + word stagger)
+     STILLHOUSE — Spirits teaser (Option A: sticky stage + word stagger)
      ============================================================= */
 
   /* Section is taller than viewport so the inner .stage can pin while words reveal.
-     Tuned to 150vh so word stagger has 50vh of scroll travel ÃÂ¢ÃÂÃÂ long enough to feel
+     Tuned to 150vh so word stagger has 50vh of scroll travel — long enough to feel
      deliberate but no dead space below.
-     overflow: clip (not hidden) ÃÂ¢ÃÂÃÂ clips visually like hidden but does NOT create a
+     overflow: clip (not hidden) — clips visually like hidden but does NOT create a
      containing block that would break the inner .stage's position:sticky. */
   .v4-stillhouse {
     position: relative;
-    height: 250vh;
+    height: 320vh;
     background: var(--ink-2);
     overflow: clip;
   }
@@ -824,7 +789,7 @@
     z-index: 1;
   }
   .v4-stillhouse .grain { z-index: 2; }
-  /* Specimen mark ÃÂ¢ÃÂÃÂ floats top-left over the still photo */
+  /* Specimen mark — floats top-left over the still photo */
   .v4-stillhouse .label {
     position: absolute;
     top: clamp(60px, 8vh, 100px);
@@ -851,8 +816,8 @@
     position: relative;
     z-index: 3;
     margin-left: auto;
-    max-width: 720px;
-    padding: clamp(40px, 6vh, 80px) clamp(40px, 6vw, 100px);
+    max-width: 760px;
+    padding: clamp(40px, 6vh, 80px) clamp(56px, 7.5vw, 140px) clamp(40px, 6vh, 80px) clamp(40px, 5vw, 80px);
     display: flex; flex-direction: column; justify-content: center;
   }
   .v4-stillhouse .rule {
@@ -863,16 +828,17 @@
   .v4-stillhouse h2 {
     font-family: 'Fraunces', 'Playfair Display', serif;
     font-weight: 500; font-style: italic;
-    font-size: clamp(48px, 6.2vw, 96px);
-    line-height: 1.02; letter-spacing: -0.028em;
-    margin: 0 0 30px;
+    font-size: clamp(46px, 5.6vw, 88px);
+    line-height: 1.18; letter-spacing: -0.028em;
+    margin: 0 0 38px;
     font-variation-settings: "opsz" 144, "SOFT" 50;
   }
   .v4-stillhouse h2 .word {
     display: block;
     opacity: 0;
-    transform: translateY(44px);
-    transition: opacity .9s ease, transform 1s cubic-bezier(.2,.7,.2,1);
+    transform: translateY(48px);
+    transition: opacity 1s ease, transform 1.1s cubic-bezier(.2,.7,.2,1);
+    margin-bottom: 6px;
   }
   .v4-stillhouse h2 .word.strong {
     color: var(--gold-bright);
@@ -972,12 +938,12 @@
   .v4-cta:hover .arr { transform: translateX(5px); }
 
   /* =============================================================
-     TABLE ÃÂ¢ÃÂÃÂ Restaurant teaser (Option A: sticky stage + word stagger)
+     TABLE — Restaurant teaser (Option A: sticky stage + word stagger)
      ============================================================= */
 
   .v4-table {
     position: relative;
-    height: 230vh;
+    height: 300vh;
     background: var(--ink-2);
     overflow: clip;
   }
@@ -1006,8 +972,8 @@
   .v4-table .roman-bg { top: 8%; right: 1%; z-index: 2; }
   .v4-table .t-inner {
     position: relative; z-index: 3;
-    padding: clamp(40px, 6vh, 80px) clamp(40px, 8vw, 140px);
-    max-width: 720px;
+    padding: clamp(40px, 6vh, 80px) clamp(40px, 5vw, 80px) clamp(40px, 6vh, 80px) clamp(56px, 7.5vw, 140px);
+    max-width: 760px;
     display: flex; flex-direction: column; justify-content: center;
   }
   .v4-table .rule {
@@ -1017,16 +983,17 @@
   .v4-table h2 {
     font-family: 'Fraunces', 'Playfair Display', serif;
     font-weight: 500; font-style: italic;
-    font-size: clamp(48px, 6.4vw, 102px);
-    line-height: 1.02; letter-spacing: -0.03em;
-    margin: 0 0 30px;
+    font-size: clamp(46px, 5.8vw, 92px);
+    line-height: 1.18; letter-spacing: -0.028em;
+    margin: 0 0 38px;
     font-variation-settings: "opsz" 144, "SOFT" 50;
   }
   .v4-table h2 .word {
     display: block;
     opacity: 0;
-    transform: translateY(44px);
-    transition: opacity .9s ease, transform 1s cubic-bezier(.2,.7,.2,1);
+    transform: translateY(48px);
+    transition: opacity 1s ease, transform 1.1s cubic-bezier(.2,.7,.2,1);
+    margin-bottom: 6px;
   }
   .v4-table h2 .word.strong {
     color: var(--gold-bright);
@@ -1074,14 +1041,14 @@
   }
 
   /* =============================================================
-     VENUE ÃÂ¢ÃÂÃÂ Events teaser (Option A: sticky stage + word stagger)
+     VENUE — Events teaser (Option A: sticky stage + word stagger)
      ============================================================= */
 
-  /* Events ÃÂ¢ÃÂÃÂ same sticky-stage pattern as Spirits/Dine. Copy on the RIGHT
+  /* Events — same sticky-stage pattern as Spirits/Dine. Copy on the RIGHT
      for the R-L-R zigzag rhythm (Spirits: R, Table: L, Events: R). */
   .v4-venue {
     position: relative;
-    height: 250vh;
+    height: 320vh;
     background: var(--ink-2);
     overflow: clip;
   }
@@ -1119,13 +1086,13 @@
     pointer-events: none; z-index: 2; user-select: none;
   }
 
-  /* Copy block ÃÂ¢ÃÂÃÂ RIGHT-aligned */
+  /* Copy block — RIGHT-aligned */
   .v4-venue .copy {
     position: relative;
     z-index: 3;
     margin-left: auto;
-    max-width: 720px;
-    padding: clamp(40px, 6vh, 80px) clamp(40px, 6vw, 100px);
+    max-width: 760px;
+    padding: clamp(40px, 6vh, 80px) clamp(56px, 7.5vw, 140px) clamp(40px, 6vh, 80px) clamp(40px, 5vw, 80px);
     display: flex; flex-direction: column; justify-content: center;
   }
   .v4-venue .rule {
@@ -1135,16 +1102,17 @@
   .v4-venue h2 {
     font-family: 'Fraunces', 'Playfair Display', serif;
     font-weight: 500; font-style: italic;
-    font-size: clamp(48px, 6.2vw, 96px);
-    line-height: 1.02; letter-spacing: -0.028em;
-    margin: 0 0 30px;
+    font-size: clamp(46px, 5.6vw, 88px);
+    line-height: 1.18; letter-spacing: -0.028em;
+    margin: 0 0 38px;
     font-variation-settings: "opsz" 144, "SOFT" 50;
   }
   .v4-venue h2 .word {
     display: block;
     opacity: 0;
-    transform: translateY(44px);
-    transition: opacity .9s ease, transform 1s cubic-bezier(.2,.7,.2,1);
+    transform: translateY(48px);
+    transition: opacity 1s ease, transform 1.1s cubic-bezier(.2,.7,.2,1);
+    margin-bottom: 6px;
   }
   .v4-venue h2 .word.strong {
     color: var(--gold-bright);
@@ -1174,7 +1142,7 @@
   .v4-venue.is-step-4 .copy > p:nth-of-type(2) { transition-delay: .15s; }
   .v4-venue.is-step-4 .copy > .v4-cta-row { opacity: 1; transform: translateY(0); transition-delay: .35s; }
 
-  /* Old collage rules kept as dead CSS ÃÂ¢ÃÂÃÂ no longer referenced */
+  /* Old collage rules kept as dead CSS — no longer referenced */
 
   .v4-collage {
     position: relative;
@@ -1210,7 +1178,7 @@
   }
 
   /* =============================================================
-     FOOTER ÃÂ¢ÃÂÃÂ compact, no big visual moment
+     FOOTER — compact, no big visual moment
      ============================================================= */
 
   .v4-footer {
@@ -1222,7 +1190,7 @@
   }
   .v4-footer .ft-row { max-width: 1280px; margin: 0 auto; }
 
-  /* Top primary row: brand ÃÂÃÂ· hours ÃÂÃÂ· ctas */
+  /* Top primary row: brand · hours · ctas */
   .v4-footer .ft-primary {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -1350,7 +1318,7 @@
   }
 
   /* =============================================================
-     VISIT ÃÂ¢ÃÂÃÂ OLD letterpress (dead, kept for reference)
+     VISIT — OLD letterpress (dead, kept for reference)
      ============================================================= */
 
   .v4-visit {
@@ -1518,7 +1486,7 @@
   }
 
   /* =============================================================
-     OLD ALMANAC ÃÂ¢ÃÂÃÂ dead CSS kept for legacy class references
+     OLD ALMANAC — dead CSS kept for legacy class references
      ============================================================= */
 
   .v4-almanac {
@@ -1528,7 +1496,7 @@
       linear-gradient(180deg, #0c0907 0%, #15100c 100%);
   }
   .v4-almanac .grain { opacity: 0.4; }
-  /* Centered Art Deco ornament ÃÂ¢ÃÂÃÂ replaces the awkward two-cluster floral */
+  /* Centered Art Deco ornament — replaces the awkward two-cluster floral */
   .v4-almanac .ornament {
     display: block;
     width: clamp(220px, 28vw, 380px);
@@ -1554,7 +1522,7 @@
     max-width: 1300px; margin: 0 auto;
     position: relative; z-index: 3;
   }
-  /* Almanac panels ÃÂ¢ÃÂÃÂ soft, borderless, separated by hairline rules at top only */
+  /* Almanac panels — soft, borderless, separated by hairline rules at top only */
   .v4-panel {
     position: relative;
     padding: 36px 30px 34px;
@@ -1654,7 +1622,7 @@
   }
 
   /* =============================================================
-     Responsive ÃÂ¢ÃÂÃÂ mobile collapses the morph (no fixed doors)
+     Responsive — mobile collapses the morph (no fixed doors)
      ============================================================= */
 
   @media (max-width: 900px) {
@@ -1689,13 +1657,19 @@
     .v4-venue { height: auto; min-height: 70vh; }
     .v4-venue .stage { position: relative; top: auto; height: auto; min-height: 70vh; }
     .v4-venue .copy { margin-left: 0; padding: 80px 28px; }
+    .v4-archive { height: auto; padding: 80px 0 60px; }
+    .v4-archive .archive-stage { position: relative; top: auto; height: auto; padding: 0; }
     /* Force the word-stagger and content reveals to be visible on mobile (no scroll-tied behavior) */
     .v4-stillhouse h2 .word,
     .v4-table h2 .word,
     .v4-venue h2 .word,
+    .v4-archive-head h2 .word,
     .v4-stillhouse .rule,
     .v4-table .rule,
     .v4-venue .rule,
+    .v4-archive-head .rule,
+    .v4-archive-head .lede,
+    .v4-chap,
     .v4-stillhouse .copy > p,
     .v4-stillhouse .copy > .v4-bottles,
     .v4-stillhouse .copy > .v4-cta-row,
@@ -1714,7 +1688,7 @@
     .v4-venue .meta { grid-template-columns: 1fr; }
   }
 
-  /* Short laptop screens (e.g., 11"ÃÂ¢ÃÂÃÂ13" MacBook Airs): tighten sizing
+  /* Short laptop screens (e.g., 11"–13" MacBook Airs): tighten sizing
      so all content fits within the 100vh sticky stage without cropping. */
   @media (min-width: 901px) and (max-height: 820px) {
     .v4-stillhouse h2 { font-size: clamp(40px, 4.8vw, 72px); margin-bottom: 22px; }
@@ -1743,7 +1717,10 @@
     .stickyfx .copy > .v4-bottles,
     .stickyfx .copy > .v4-cta-row,
     .stickyfx p,
-    .stickyfx .t-inner > .v4-cta-row {
+    .stickyfx .t-inner > .v4-cta-row,
+    .v4-archive-head .rule,
+    .v4-archive-head .lede,
+    .v4-archive .v4-chap {
       transition-duration: 1s !important;
     }
   }
@@ -1751,7 +1728,7 @@
 </head>
 <body class="v4 doors-open">
 
-<!-- SVG defs ÃÂ¢ÃÂÃÂ TD monogram + wax seal -->
+<!-- SVG defs — TD monogram + wax seal -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="td-mono" viewBox="0 0 100 100">
@@ -1778,13 +1755,13 @@
       <path d="M50 6 L57 12 L65 9 L67 17 L75 18 L74 26 L81 30 L77 37 L82 44 L75 48 L77 56 L69 58 L67 66 L60 64 L54 70 L50 64 L44 70 L40 62 L33 64 L31 56 L23 54 L25 46 L18 42 L23 35 L19 28 L26 24 L25 16 L33 17 L36 9 L43 12 Z" fill="url(#wax-grad)"/>
       <text x="50" y="44" text-anchor="middle" fill="rgba(255,220,180,0.85)" font-family="Playfair Display, serif" font-style="italic" font-weight="900" font-size="22">T</text>
       <text x="50" y="62" text-anchor="middle" fill="rgba(255,220,180,0.85)" font-family="Playfair Display, serif" font-style="italic" font-weight="900" font-size="14">D</text>
-      <text x="50" y="78" text-anchor="middle" fill="rgba(255,220,180,0.5)" font-family="Cinzel, serif" font-size="5" letter-spacing="1.4">EST ÃÂÃÂ· 1857</text>
+      <text x="50" y="78" text-anchor="middle" fill="rgba(255,220,180,0.5)" font-family="Cinzel, serif" font-size="5" letter-spacing="1.4">EST · 1857</text>
     </symbol>
   </defs>
 </svg>
 
 <!-- =================================================== -->
-<!-- COUNTDOWN BANNER ÃÂ¢ÃÂÃÂ top of page                       -->
+<!-- COUNTDOWN BANNER — top of page                       -->
 <!-- =================================================== -->
 <a class="v4-banner" href="spirits/single-malt/index.html" id="asm-banner">
   <span class="b-mark">&#10022;</span>
@@ -1800,12 +1777,12 @@
 </a>
 
 <!-- =================================================== -->
-<!-- STICKY SHELF ÃÂ¢ÃÂÃÂ destination for morphing doors        -->
+<!-- STICKY SHELF — destination for morphing doors        -->
 <!-- =================================================== -->
 <header class="v4-shelf">
   <a class="s-mono" href="#top">
     <svg><use href="#td-mono"/></svg>
-    <span>Thornton <span class="y">ÃÂÃÂ·</span> 1857</span>
+    <span>Thornton <span class="y">·</span> 1857</span>
   </a>
 
   <div class="s-slots" id="shelf-slots">
@@ -1818,7 +1795,7 @@
 </header>
 
 <!-- =================================================== -->
-<!-- THE MORPHING DOORS ÃÂ¢ÃÂÃÂ fixed-position, JS-driven       -->
+<!-- THE MORPHING DOORS — fixed-position, JS-driven       -->
 <!-- =================================================== -->
 <a class="v4-mdoor" data-idx="0" data-target="spirits" href="spirits/index.html">
   <div class="m-photo" style="background-image: url('assets/photos/door-spirits.jpg');"></div>
@@ -1883,67 +1860,71 @@
 <!-- =================================================== -->
 <!-- THE ARCHIVE                                          -->
 <!-- =================================================== -->
-<section class="v4-section v4-archive cursor-glow" id="archive">
+<section class="v4-section v4-archive cursor-glow stickyfx" id="archive">
   <div class="grain"></div>
   <div class="halftone"></div>
 
-  <div class="v4-archive-head">
-    <div class="rule reveal">The Archive</div>
-    <h2 class="reveal" style="--reveal-delay: 120ms;">It was a <strong>brewery</strong> before it was a story.<br>A vault before it was a still.</h2>
-    <p class="lede reveal" style="--reveal-delay: 260ms;">Built into limestone in 1857. Locked up by Prohibition. Raided by the FBI. Restored, board by board, in 2019. Today the same building pours spirits drawn from the same artesian well that fed its first brew kettle.</p>
-  </div>
+  <div class="archive-stage">
 
-  <div class="v4-chapters">
-    <article class="v4-chap reveal" style="--reveal-delay: 0ms;">
-      <p class="c-year">1857</p>
-      <span class="c-verb">Built</span>
-      <div class="c-frame">
-        <span class="tape l"></span>
-        <span class="tape r"></span>
-        <div class="c-img contain"><img src="assets/landscape-clean.png" alt="Thornton Brewery, 1857"></div>
-      </div>
-      <p class="c-copy">A limestone brewery rises beside the spring&#8209;fed Thorn Creek. John Bielfeldt taps the artesian well; the bricks come from the bluff that named the town.</p>
-    </article>
+    <div class="v4-archive-head">
+      <div class="rule">The Archive</div>
+      <h2>
+        <span class="word w-1">It was a <strong>brewery</strong> before it was a story.</span>
+        <span class="word w-2">A vault before it was a still.</span>
+      </h2>
+      <p class="lede">Built into limestone in 1857. Locked up by Prohibition. Raided by the FBI. Restored, board by board, in 2019. The same building pours spirits drawn from the same artesian well that fed its first brew kettle.</p>
+    </div>
 
-    <article class="v4-chap reveal" style="--reveal-delay: 120ms;">
-      <p class="c-year">1920</p>
-      <span class="c-verb">Seized</span>
-      <div class="c-frame">
-        <span class="tape l"></span>
-        <span class="tape r"></span>
-        <div class="c-img anchor-top"><img src="assets/photos/historical-1919.jpg" alt="Prohibition&#8209;era operators"></div>
-        <div class="stamp"><div class="ring">Seized</div></div>
-      </div>
-      <p class="c-copy">Volstead Act. The brewery closes by federal order. The Capone organization moves in. The limestone vault &mdash; built to age lagers &mdash; becomes a hideout.</p>
-    </article>
+    <div class="v4-chapters">
+      <article class="v4-chap c-1">
+        <p class="c-year">1857</p>
+        <span class="c-verb">Built</span>
+        <div class="c-frame">
+          <span class="tape l"></span>
+          <span class="tape r"></span>
+          <div class="c-img contain"><img src="assets/landscape-clean.png" alt="Thornton Brewery, 1857"></div>
+        </div>
+        <p class="c-copy">A limestone brewery rises beside the spring&#8209;fed Thorn Creek. John Bielfeldt taps the artesian well; the bricks come from the bluff that named the town.</p>
+      </article>
 
-    <article class="v4-chap reveal" style="--reveal-delay: 240ms;">
-      <p class="c-year">1944</p>
-      <span class="c-verb">Raided</span>
-      <div class="c-frame">
-        <span class="tape l"></span>
-        <span class="tape r"></span>
-        <div class="c-img"><img src="assets/photos/distillery-tools.jpg" alt="The 1944 raid"></div>
-        <div class="stamp"><div class="ring">Raided</div></div>
-      </div>
-      <p class="c-copy">An illegal still discovered in the cellar. FBI agents seal the building. For seven decades it stands shuttered &mdash; a monument to the trade it was forced to hide.</p>
-    </article>
+      <article class="v4-chap c-2">
+        <p class="c-year">1920</p>
+        <span class="c-verb">Seized</span>
+        <div class="c-frame">
+          <span class="tape l"></span>
+          <span class="tape r"></span>
+          <div class="c-img anchor-top"><img src="assets/photos/historical-1919.jpg" alt="Prohibition&#8209;era operators"></div>
+        </div>
+        <p class="c-copy">Volstead Act. The brewery closes by federal order. The Capone organization moves in. The limestone vault &mdash; built to age lagers &mdash; becomes a hideout.</p>
+      </article>
 
-    <article class="v4-chap reveal" style="--reveal-delay: 360ms;">
-      <p class="c-year">2019</p>
-      <span class="c-verb">Reborn</span>
-      <div class="c-frame">
-        <span class="tape l"></span>
-        <span class="tape r"></span>
-        <div class="c-img"><img src="assets/photos/distillery-renovation.jpg" alt="The 2019 rebirth"></div>
-      </div>
-      <p class="c-copy">Two founders buy the building. The same well is re&#8209;tapped. The first legal spirit drawn off the same stone in a century goes into a copper still on the original floor.</p>
-    </article>
+      <article class="v4-chap c-3">
+        <p class="c-year">1944</p>
+        <span class="c-verb">Raided</span>
+        <div class="c-frame">
+          <span class="tape l"></span>
+          <span class="tape r"></span>
+          <div class="c-img"><img src="assets/photos/distillery-tools.jpg" alt="The 1944 raid"></div>
+        </div>
+        <p class="c-copy">An illegal still discovered in the cellar. FBI agents seal the building. For seven decades it stands shuttered &mdash; a monument to the trade it was forced to hide.</p>
+      </article>
+
+      <article class="v4-chap c-4">
+        <p class="c-year">2019</p>
+        <span class="c-verb">Reborn</span>
+        <div class="c-frame">
+          <span class="tape l"></span>
+          <span class="tape r"></span>
+          <div class="c-img"><img src="assets/photos/distillery-renovation.jpg" alt="The 2019 rebirth"></div>
+        </div>
+        <p class="c-copy">Two founders buy the building. The same well is re&#8209;tapped. The first legal spirit drawn off the same stone in a century goes into a copper still on the original floor.</p>
+      </article>
+    </div>
+
   </div>
 </section>
-
 <!-- =================================================== -->
-<!-- STILLHOUSE ÃÂ¢ÃÂÃÂ Spirits teaser                          -->
+<!-- STILLHOUSE — Spirits teaser                          -->
 <!-- =================================================== -->
 <section class="v4-section v4-stillhouse cursor-glow stickyfx" id="spirits">
   <div class="stage">
@@ -1991,7 +1972,7 @@
 </section>
 
 <!-- =================================================== -->
-<!-- TABLE ÃÂ¢ÃÂÃÂ Restaurant teaser                            -->
+<!-- TABLE — Restaurant teaser                            -->
 <!-- =================================================== -->
 <section class="v4-section v4-table stickyfx" id="table">
   <div class="stage">
@@ -2018,7 +1999,7 @@
 </section>
 
 <!-- =================================================== -->
-<!-- VENUE ÃÂ¢ÃÂÃÂ Events teaser                                -->
+<!-- VENUE — Events teaser                                -->
 <!-- =================================================== -->
 <section class="v4-section v4-venue cursor-glow stickyfx" id="venue">
   <div class="stage">
@@ -2046,7 +2027,7 @@
 </section>
 
 <!-- =================================================== -->
-<!-- ALMANAC ÃÂ¢ÃÂÃÂ visit / waitlist                           -->
+<!-- ALMANAC — visit / waitlist                           -->
 <!-- =================================================== -->
 <footer class="v4-footer" id="visit">
   <div class="ft-row ft-primary">
@@ -2090,7 +2071,7 @@
 </footer>
 
 <script>
-// Countdown banner ÃÂ¢ÃÂÃÂ Thornton Single Malt drops May 22, 2026 6 pm CT
+// Countdown banner — Thornton Single Malt drops May 22, 2026 6 pm CT
 (function () {
   const banner = document.getElementById('asm-banner');
   if (!banner) return;
@@ -2122,8 +2103,8 @@
 
 <script>
 (function () {
-  // ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ DOOR MORPH ENGINE ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
-  // The 3 fixed doors animate from hero positions ÃÂ¢ÃÂÃÂ shelf-pill positions
+  // ——— DOOR MORPH ENGINE —————————————————————————————————————
+  // The 3 fixed doors animate from hero positions → shelf-pill positions
   // based on page scroll, with content fading between door view and pill view.
 
   const body = document.body;
@@ -2136,7 +2117,7 @@
   const isMobile = () => window.matchMedia('(max-width: 900px)').matches;
 
   // Compute start (hero) and end (shelf) rects for each door.
-  // End rects are computed mathematically from CSS variables ÃÂ¢ÃÂÃÂ no DOM measurement.
+  // End rects are computed mathematically from CSS variables — no DOM measurement.
   let startRects = [], endRects = [];
   function measure() {
     if (isMobile()) return;
@@ -2147,7 +2128,7 @@
     const BANNER_H = 48;
     const SHELF_H  = 64;
 
-    // Hero (start) ÃÂ¢ÃÂÃÂ doc coords
+    // Hero (start) — doc coords
     const heroRect = heroSlots.getBoundingClientRect();
     const scrollY = window.scrollY || window.pageYOffset || 0;
     const sTopDoc = heroRect.top + scrollY;
@@ -2157,7 +2138,7 @@
       topDoc: sTopDoc, left: i * sW, width: sW, height: sH
     }));
 
-    // Shelf (end) ÃÂ¢ÃÂÃÂ computed viewport coords
+    // Shelf (end) — computed viewport coords
     const vw = window.innerWidth;
     const totalW = PILL_W * 3 + PILL_GAP * 2;
     const startX = (vw - totalW) / 2;
@@ -2170,7 +2151,7 @@
     }));
   }
 
-  // Apply rects in VIEWPORT coords (position: fixed) ÃÂ¢ÃÂÃÂ interpolated by p.
+  // Apply rects in VIEWPORT coords (position: fixed) — interpolated by p.
   function update() {
     const y = window.scrollY || window.pageYOffset;
     const vh = window.innerHeight;
@@ -2186,10 +2167,12 @@
       return;
     }
 
-    const morphRange = vh * 0.70;   // px scroll over which morph happens
+    const morphRange = vh * 1.10;   // px scroll over which morph happens — longer = smoother
     const raw = Math.max(0, Math.min(1, y / morphRange));
-    // ease-in-out-cubic ÃÂ¢ÃÂÃÂ slow start, smooth middle, gentle landing
-    const p = raw < 0.5 ? 4 * raw * raw * raw : 1 - Math.pow(-2 * raw + 2, 3) / 2;
+    // ease-in-out-quint — very gentle on both ends, smooth glide through middle
+    const p = raw < 0.5
+      ? 16 * raw * raw * raw * raw * raw
+      : 1 - Math.pow(-2 * raw + 2, 5) / 2;
 
     // Hero text fade
     body.style.setProperty('--hero-fade', Math.min(1, y / (vh * 0.40)).toFixed(3));
@@ -2197,14 +2180,14 @@
     // Shelf reveal
     if (y > 60) body.classList.add('shelf-on'); else body.classList.remove('shelf-on');
 
-    // Doors open / closed body class ÃÂ¢ÃÂÃÂ drives hover gating
+    // Doors open / closed body class — drives hover gating
     if (p < 0.4) body.classList.add('doors-open');
     else         body.classList.remove('doors-open');
 
     doors.forEach((d, i) => {
       const s = startRects[i] || { topDoc: vh * 0.42 + y, left: i * window.innerWidth/3, width: window.innerWidth/3, height: vh * 0.58 };
       const e = endRects[i]   || { top: 14, left: window.innerWidth / 2 - 198 + i * 138, width: 132, height: 36 };
-      // START is in doc coords ÃÂ¢ÃÂÃÂ convert to viewport-Y by subtracting current scroll
+      // START is in doc coords → convert to viewport-Y by subtracting current scroll
       // END is already in viewport coords (shelf is position:fixed)
       const sTopV = s.topDoc - y;
       const eTopV = e.top;
@@ -2258,7 +2241,7 @@
 
   init();
 
-  // ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ ACTIVE SECTION HIGHLIGHT ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+  // ——— ACTIVE SECTION HIGHLIGHT —————————————————————————————
   const sections = ['spirits','table','venue'].map(id => document.getElementById(id)).filter(Boolean);
   if (sections.length) {
     const setActive = (id) => {
@@ -2274,7 +2257,7 @@
     sections.forEach(s => io.observe(s));
   }
 
-  // ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ REVEAL ON SCROLL ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+  // ——— REVEAL ON SCROLL —————————————————————————————————————
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -2286,24 +2269,22 @@
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-in'));
   }
 
-  // ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ STICKY-STAGE WORD-STAGGER ENGINE ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
-  // One unified scroll handler for Spirits / Dine / Events. Each section is taller
-  // than the viewport with a sticky inner .stage. We compute scroll progress through
-  // the section (0 = stage just pinned, 1 = stage just about to unpin) and toggle
-  // .is-step-1 through .is-step-4 classes. CSS handles all the actual fades/slides.
+  // ─── STICKY-STAGE STEP ENGINE ────────────────────────────
+  // Unified scroll handler for any .stickyfx section (Archive, Spirits, Dine, Events).
+  // Toggles .is-step-1 ... .is-step-6 as scroll progress passes thresholds. Each
+  // section's CSS opts into the steps it uses.
   (function () {
     const isDesktop = () => window.matchMedia('(min-width: 901px)').matches;
     const sections = Array.from(document.querySelectorAll('.stickyfx'));
     if (!sections.length) return;
-    // Thresholds chosen for tighter sections (~50vh of pinned scroll travel) ÃÂ¢ÃÂÃÂ words reveal
-    // earlier and stagger across the first half, content lands by 65%.
-    const STEPS = [0.06, 0.14, 0.22, 0.32];
+    const STEPS = [0.05, 0.12, 0.20, 0.28, 0.36, 0.44];
     let raf = 0;
     function update() {
       raf = 0;
       if (!isDesktop()) {
-        // Mobile: just make sure all step classes are on so content shows immediately
-        sections.forEach(s => { s.classList.add('is-step-1','is-step-2','is-step-3','is-step-4'); });
+        sections.forEach(s => {
+          STEPS.forEach((_, i) => s.classList.add(`is-step-${i + 1}`));
+        });
         return;
       }
       const vh = window.innerHeight;
@@ -2312,10 +2293,9 @@
         const total = section.offsetHeight - vh;
         const scrolled = Math.max(0, -rect.top);
         const p = Math.max(0, Math.min(1, total > 0 ? scrolled / total : 0));
-        section.classList.toggle('is-step-1', p > STEPS[0]);
-        section.classList.toggle('is-step-2', p > STEPS[1]);
-        section.classList.toggle('is-step-3', p > STEPS[2]);
-        section.classList.toggle('is-step-4', p > STEPS[3]);
+        STEPS.forEach((t, i) => {
+          section.classList.toggle(`is-step-${i + 1}`, p > t);
+        });
       });
     }
     function onScroll() {
@@ -2326,11 +2306,11 @@
     if (window.visualViewport) {
       window.visualViewport.addEventListener('resize', onScroll);
     }
-    update();  // initial paint
+    update();
   })();
 
 
-  // ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ COUNTER ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+  // ——— COUNTER —————————————————————————————————————————————
   document.querySelectorAll('[data-count]').forEach(el => {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -2351,7 +2331,7 @@
     io.observe(el);
   });
 
-  // ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ CURSOR GLOW ON HERO ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+  // ——— CURSOR GLOW ON HERO —————————————————————————————————
   let glowRaf = null, gx = 50, gy = 28;
   hero.addEventListener('mousemove', (e) => {
     const r = hero.getBoundingClientRect();
@@ -2368,7 +2348,7 @@
     hero.style.setProperty('--cy', '28%');
   });
 
-  // ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ CURSOR GLOW on .cursor-glow sections ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+  // ——— CURSOR GLOW on .cursor-glow sections ————————————————
   document.querySelectorAll('.cursor-glow').forEach(sec => {
     let r = null;
     sec.addEventListener('mouseenter', () => {
@@ -2386,7 +2366,7 @@
     });
   });
 
-  // ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ SMOOTH SCROLL ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+  // ——— SMOOTH SCROLL ———————————————————————————————————————
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', (e) => {
       const id = a.getAttribute('href').slice(1);
@@ -2397,7 +2377,7 @@
     });
   });
 
-  // ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ DOOR CLICK: when pill state, scroll to section instead of navigating
+  // ——— DOOR CLICK: when pill state, scroll to section instead of navigating
   doors.forEach(d => {
     d.addEventListener('click', (e) => {
       const p = parseFloat(d.style.getPropertyValue('--p')) || 0;
