@@ -1767,12 +1767,12 @@
   .v4-door-anchor {
     position: fixed;
     top: 50%; left: 50%;
-    transform: translate(-50%, -50%) scale(calc(0.65 + var(--p, 0) * 0.35));
-    width: clamp(180px, 22vw, 320px); height: clamp(180px, 22vw, 320px);
+    transform: translate(-50%, -50%) scale(calc(0.6 + var(--p, 0) * 0.45));
+    width: clamp(260px, 32vw, 440px); height: clamp(260px, 32vw, 440px);
     z-index: 1;
-    opacity: calc(var(--p, 0) * 0.5);
+    opacity: calc(var(--p, 0) * 0.85);
     pointer-events: none;
-    color: rgba(212, 175, 55, 0.72);
+    color: rgba(212, 175, 55, 0.92);
     transition: opacity .8s ease;
     will-change: transform, opacity;
   }
