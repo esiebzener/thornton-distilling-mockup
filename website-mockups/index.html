@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thornton Distilling Co. — Illinois' Oldest Standing Brewery, Reborn</title>
+  <title>Thornton Distilling Co. â Illinois' Oldest Standing Brewery, Reborn</title>
   <meta name="description" content="A working distillery, restaurant, and event house inside the same limestone walls on the same artesian water since 1857.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="styles.css">
   <style>
   /* =============================================================
-     HOMEPAGE v4 — Thornton Distilling
+     HOMEPAGE v4 â Thornton Distilling
      Door-to-pill scroll morph. Cleaner identity.
      ============================================================= */
 
@@ -31,7 +31,7 @@
     --brick:      #6E2A1F;
     --stamp:      #8C2D1F;
 
-    /* Door morph constants — used by both CSS and JS */
+    /* Door morph constants â used by both CSS and JS */
     --pill-w:    110px;
     --pill-h:    32px;
     --pill-gap:  28px;
@@ -54,7 +54,7 @@
   body.v4 { --hero-fade: 0; }
 
   /* ===========================================================
-     SCROLL-DRIVEN ANIMATIONS — Apple-style parallax / reveals
+     SCROLL-DRIVEN ANIMATIONS â Apple-style parallax / reveals
      Uses modern animation-timeline: view() in Chromium 115+.
      Falls back to static rendering in older browsers.
      =========================================================== */
@@ -73,7 +73,7 @@
       to   { transform: translateY(-50%) translateY(-60px); }
     }
 
-    /* Chapter timeline photos — gentle zoom-in as they enter view */
+    /* Chapter timeline photos â gentle zoom-in as they enter view */
     .v4-chap .c-img {
       animation: chap-enter linear both;
       animation-timeline: view();
@@ -84,7 +84,7 @@
       to   { transform: translateY(0)    scale(1);    opacity: 1; }
     }
 
-    /* Bottle cards — pop up as the spirits row enters view */
+    /* Bottle cards â pop up as the spirits row enters view */
     .v4-bottle {
       animation: bottle-enter linear both;
       animation-timeline: view();
@@ -98,7 +98,7 @@
       to   { transform: translateY(0);    opacity: 1; }
     }
 
-    /* Section headlines — subtle scale-in on view entry */
+    /* Section headlines â subtle scale-in on view entry */
     .v4-section h2 {
       animation: head-scale linear both;
       animation-timeline: view();
@@ -111,7 +111,7 @@
 
   }
 
-  /* Cursor-tracked gold glow — adds a soft warm halo wherever the mouse is.
+  /* Cursor-tracked gold glow â adds a soft warm halo wherever the mouse is.
      Uses ::after to avoid colliding with sections that use ::before for overlays. */
   .cursor-glow {
     position: relative;
@@ -166,7 +166,7 @@
   .v4 .reveal.is-in { opacity: 1; transform: translateY(0); }
 
   /* =============================================================
-     COUNTDOWN BANNER — top of page
+     COUNTDOWN BANNER â top of page
      ============================================================= */
 
   .v4-banner {
@@ -278,7 +278,7 @@
     font-size: 13px; letter-spacing: 0.15em;
   }
 
-  /* Slot placeholders — invisible; doors morph onto these positions */
+  /* Slot placeholders â invisible; doors morph onto these positions */
   .v4-shelf .s-slots {
     position: relative;
     display: flex;
@@ -378,7 +378,7 @@
     background: var(--gold); color: var(--forest-deep); border-color: var(--gold);
   }
 
-  /* Centered hero tagline — slim, above the doors */
+  /* Centered hero tagline â slim, above the doors */
   .v4-hero-mid {
     position: relative; z-index: 5;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -412,7 +412,7 @@
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  /* Hero slot — JS reads its bounding rect for the door START positions. */
+  /* Hero slot â JS reads its bounding rect for the door START positions. */
   .v4-hero-slots {
     position: relative;
     flex: 1;
@@ -445,7 +445,7 @@
   }
 
   /* =============================================================
-     THE MORPHING DOORS — fixed position, JS-driven
+     THE MORPHING DOORS â fixed position, JS-driven
      ============================================================= */
 
   .v4-mdoor {
@@ -462,7 +462,7 @@
     will-change: top, left, width, height;
     display: flex; align-items: center; justify-content: center;
   }
-  /* Active-section underline — gold rule appears below the pill at p=1 */
+  /* Active-section underline â gold rule appears below the pill at p=1 */
   .v4-mdoor::after {
     content: '';
     position: absolute;
@@ -481,7 +481,7 @@
     background-size: cover; background-position: center;
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 22%, black 78%, transparent 100%);
             mask-image: linear-gradient(90deg, transparent 0%, black 22%, black 78%, transparent 100%);
-    /* Linear fade over morph — visible at p=0.5, gone at p=1 */
+    /* Linear fade over morph â visible at p=0.5, gone at p=1 */
     opacity: calc(1 - var(--p, 0));
     filter: saturate(calc(1 + var(--p, 0) * 0.4)) brightness(calc(1 + var(--p, 0) * 0.2));
     animation: door-ken 26s ease-in-out infinite alternate;
@@ -506,7 +506,7 @@
     opacity: calc(0.9 - var(--p, 0) * 1.0);
   }
 
-  /* Headline — smoothly scales + repositions from hero to shelf via --p.
+  /* Headline â smoothly scales + repositions from hero to shelf via --p.
      Style matches the original door headline: bold Playfair, not italic.
      Hero state: left-aligned near bottom (matches original layout).
      Shelf state: centered in pill area. */
@@ -523,7 +523,7 @@
     line-height: 0.9;
     white-space: nowrap;
     pointer-events: none;
-    /* Smooth interpolation: large → small, just-above-sub → center.
+    /* Smooth interpolation: large â small, just-above-sub â center.
        Hero `top` is calc(100% - 282px) so the headline sits a FIXED distance
        above the sub no matter how tall the door is. */
     font-size: calc(94px - var(--p, 0) * 80px);
@@ -534,13 +534,13 @@
     transform: translate(calc(var(--p, 0) * -50%), -50%);
   }
 
-  /* Secondary content — eyebrow, sub, step — fades out as morph progresses */
+  /* Secondary content â eyebrow, sub, step â fades out as morph progresses */
   .v4-mdoor .m-content {
     position: absolute; inset: 0;
     pointer-events: none;
     opacity: calc(1 - var(--p, 0) * 1.8);
   }
-  /* Door content (bottom-up): eyebrow (small label) → step (CTA) → sub → headline (above, via .d-headline) */
+  /* Door content (bottom-up): eyebrow (small label) â step (CTA) â sub â headline (above, via .d-headline) */
   .v4-mdoor .m-content .d-eyebrow {
     position: absolute;
     bottom: 30px;
@@ -572,13 +572,13 @@
     color: rgba(248, 240, 220, 0.8);
   }
 
-  /* Hover state — only at p < 0.5 (door state) */
+  /* Hover state â only at p < 0.5 (door state) */
   body.doors-open .v4-mdoor:hover .m-photo { filter: brightness(1.10); transform: scale(1.05); }
   body.doors-open .v4-mdoor:hover .m-veil { opacity: 0.55; }
   body.doors-open .v4-mdoor:hover .m-content .d-step { gap: 18px; }
 
   /* =============================================================
-     SECTION SHELL — used by teaser sections
+     SECTION SHELL â used by teaser sections
      ============================================================= */
 
   .v4-section {
@@ -596,7 +596,7 @@
   }
 
   /* =============================================================
-     THE ARCHIVE — timeline
+     THE ARCHIVE â timeline
      ============================================================= */
 
   .v4-archive {
@@ -647,7 +647,7 @@
     font-style: italic; margin: 0; max-width: 640px; margin-inline: auto;
   }
 
-  /* Chapter grid — polaroids w/ tape ABOVE the photo */
+  /* Chapter grid â polaroids w/ tape ABOVE the photo */
   .v4-chapters {
     display: grid; grid-template-columns: repeat(4, 1fr);
     gap: clamp(28px, 2.4vw, 48px);
@@ -675,7 +675,7 @@
     margin-bottom: 22px; display: block;
   }
 
-  /* Tape strips sit ABOVE the photo — pinning it like a polaroid */
+  /* Tape strips sit ABOVE the photo â pinning it like a polaroid */
   .v4-chap .c-frame {
     position: relative;
   }
@@ -701,7 +701,7 @@
     /* Subtle drop shadow gives photos that "sitting on a page" feel */
     filter: drop-shadow(0 6px 14px rgba(0,0,0,0.55));
   }
-  /* Per-chapter unique torn-edge masks — each photo "tears" differently */
+  /* Per-chapter unique torn-edge masks â each photo "tears" differently */
   .v4-chap:nth-child(1) .c-img {
     /* Top heavily torn, gentler sides */
     clip-path: polygon(
@@ -761,7 +761,7 @@
     font-style: italic; margin: 0;
   }
 
-  /* SEIZED / RAIDED stamp ephemera — bigger, brighter red, percent-positioned */
+  /* SEIZED / RAIDED stamp ephemera â bigger, brighter red, percent-positioned */
   .v4-chap .stamp {
     position: absolute;
     top: 32%; right: 6%;
@@ -788,17 +788,17 @@
   }
 
   /* =============================================================
-     STILLHOUSE — Spirits teaser (Option A: sticky stage + word stagger)
+     STILLHOUSE â Spirits teaser (Option A: sticky stage + word stagger)
      ============================================================= */
 
   /* Section is taller than viewport so the inner .stage can pin while words reveal.
-     Tuned to 150vh so word stagger has 50vh of scroll travel — long enough to feel
+     Tuned to 150vh so word stagger has 50vh of scroll travel â long enough to feel
      deliberate but no dead space below.
-     overflow: clip (not hidden) — clips visually like hidden but does NOT create a
+     overflow: clip (not hidden) â clips visually like hidden but does NOT create a
      containing block that would break the inner .stage's position:sticky. */
   .v4-stillhouse {
     position: relative;
-    height: 150vh;
+    height: 220vh;
     background: var(--ink-2);
     overflow: clip;
   }
@@ -824,7 +824,7 @@
     z-index: 1;
   }
   .v4-stillhouse .grain { z-index: 2; }
-  /* Specimen mark — floats top-left over the still photo */
+  /* Specimen mark â floats top-left over the still photo */
   .v4-stillhouse .label {
     position: absolute;
     top: clamp(60px, 8vh, 100px);
@@ -972,12 +972,12 @@
   .v4-cta:hover .arr { transform: translateX(5px); }
 
   /* =============================================================
-     TABLE — Restaurant teaser (Option A: sticky stage + word stagger)
+     TABLE â Restaurant teaser (Option A: sticky stage + word stagger)
      ============================================================= */
 
   .v4-table {
     position: relative;
-    height: 130vh;
+    height: 200vh;
     background: var(--ink-2);
     overflow: clip;
   }
@@ -1074,14 +1074,14 @@
   }
 
   /* =============================================================
-     VENUE — Events teaser (Option A: sticky stage + word stagger)
+     VENUE â Events teaser (Option A: sticky stage + word stagger)
      ============================================================= */
 
-  /* Events — same sticky-stage pattern as Spirits/Dine. Copy on the RIGHT
+  /* Events â same sticky-stage pattern as Spirits/Dine. Copy on the RIGHT
      for the R-L-R zigzag rhythm (Spirits: R, Table: L, Events: R). */
   .v4-venue {
     position: relative;
-    height: 150vh;
+    height: 220vh;
     background: var(--ink-2);
     overflow: clip;
   }
@@ -1119,7 +1119,7 @@
     pointer-events: none; z-index: 2; user-select: none;
   }
 
-  /* Copy block — RIGHT-aligned */
+  /* Copy block â RIGHT-aligned */
   .v4-venue .copy {
     position: relative;
     z-index: 3;
@@ -1174,7 +1174,7 @@
   .v4-venue.is-step-4 .copy > p:nth-of-type(2) { transition-delay: .15s; }
   .v4-venue.is-step-4 .copy > .v4-cta-row { opacity: 1; transform: translateY(0); transition-delay: .35s; }
 
-  /* Old collage rules kept as dead CSS — no longer referenced */
+  /* Old collage rules kept as dead CSS â no longer referenced */
 
   .v4-collage {
     position: relative;
@@ -1210,7 +1210,7 @@
   }
 
   /* =============================================================
-     FOOTER — compact, no big visual moment
+     FOOTER â compact, no big visual moment
      ============================================================= */
 
   .v4-footer {
@@ -1222,7 +1222,7 @@
   }
   .v4-footer .ft-row { max-width: 1280px; margin: 0 auto; }
 
-  /* Top primary row: brand · hours · ctas */
+  /* Top primary row: brand Â· hours Â· ctas */
   .v4-footer .ft-primary {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -1350,7 +1350,7 @@
   }
 
   /* =============================================================
-     VISIT — OLD letterpress (dead, kept for reference)
+     VISIT â OLD letterpress (dead, kept for reference)
      ============================================================= */
 
   .v4-visit {
@@ -1518,7 +1518,7 @@
   }
 
   /* =============================================================
-     OLD ALMANAC — dead CSS kept for legacy class references
+     OLD ALMANAC â dead CSS kept for legacy class references
      ============================================================= */
 
   .v4-almanac {
@@ -1528,7 +1528,7 @@
       linear-gradient(180deg, #0c0907 0%, #15100c 100%);
   }
   .v4-almanac .grain { opacity: 0.4; }
-  /* Centered Art Deco ornament — replaces the awkward two-cluster floral */
+  /* Centered Art Deco ornament â replaces the awkward two-cluster floral */
   .v4-almanac .ornament {
     display: block;
     width: clamp(220px, 28vw, 380px);
@@ -1554,7 +1554,7 @@
     max-width: 1300px; margin: 0 auto;
     position: relative; z-index: 3;
   }
-  /* Almanac panels — soft, borderless, separated by hairline rules at top only */
+  /* Almanac panels â soft, borderless, separated by hairline rules at top only */
   .v4-panel {
     position: relative;
     padding: 36px 30px 34px;
@@ -1654,7 +1654,7 @@
   }
 
   /* =============================================================
-     Responsive — mobile collapses the morph (no fixed doors)
+     Responsive â mobile collapses the morph (no fixed doors)
      ============================================================= */
 
   @media (max-width: 900px) {
@@ -1714,7 +1714,7 @@
     .v4-venue .meta { grid-template-columns: 1fr; }
   }
 
-  /* Short laptop screens (e.g., 11"–13" MacBook Airs): tighten sizing
+  /* Short laptop screens (e.g., 11"â13" MacBook Airs): tighten sizing
      so all content fits within the 100vh sticky stage without cropping. */
   @media (min-width: 901px) and (max-height: 820px) {
     .v4-stillhouse h2 { font-size: clamp(40px, 4.8vw, 72px); margin-bottom: 22px; }
@@ -1745,7 +1745,7 @@
 </head>
 <body class="v4 doors-open">
 
-<!-- SVG defs ─ TD monogram + wax seal -->
+<!-- SVG defs â TD monogram + wax seal -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="td-mono" viewBox="0 0 100 100">
@@ -1772,13 +1772,13 @@
       <path d="M50 6 L57 12 L65 9 L67 17 L75 18 L74 26 L81 30 L77 37 L82 44 L75 48 L77 56 L69 58 L67 66 L60 64 L54 70 L50 64 L44 70 L40 62 L33 64 L31 56 L23 54 L25 46 L18 42 L23 35 L19 28 L26 24 L25 16 L33 17 L36 9 L43 12 Z" fill="url(#wax-grad)"/>
       <text x="50" y="44" text-anchor="middle" fill="rgba(255,220,180,0.85)" font-family="Playfair Display, serif" font-style="italic" font-weight="900" font-size="22">T</text>
       <text x="50" y="62" text-anchor="middle" fill="rgba(255,220,180,0.85)" font-family="Playfair Display, serif" font-style="italic" font-weight="900" font-size="14">D</text>
-      <text x="50" y="78" text-anchor="middle" fill="rgba(255,220,180,0.5)" font-family="Cinzel, serif" font-size="5" letter-spacing="1.4">EST · 1857</text>
+      <text x="50" y="78" text-anchor="middle" fill="rgba(255,220,180,0.5)" font-family="Cinzel, serif" font-size="5" letter-spacing="1.4">EST Â· 1857</text>
     </symbol>
   </defs>
 </svg>
 
 <!-- =================================================== -->
-<!-- COUNTDOWN BANNER — top of page                       -->
+<!-- COUNTDOWN BANNER â top of page                       -->
 <!-- =================================================== -->
 <a class="v4-banner" href="spirits/single-malt/index.html" id="asm-banner">
   <span class="b-mark">&#10022;</span>
@@ -1794,12 +1794,12 @@
 </a>
 
 <!-- =================================================== -->
-<!-- STICKY SHELF — destination for morphing doors        -->
+<!-- STICKY SHELF â destination for morphing doors        -->
 <!-- =================================================== -->
 <header class="v4-shelf">
   <a class="s-mono" href="#top">
     <svg><use href="#td-mono"/></svg>
-    <span>Thornton <span class="y">·</span> 1857</span>
+    <span>Thornton <span class="y">Â·</span> 1857</span>
   </a>
 
   <div class="s-slots" id="shelf-slots">
@@ -1812,7 +1812,7 @@
 </header>
 
 <!-- =================================================== -->
-<!-- THE MORPHING DOORS — fixed-position, JS-driven       -->
+<!-- THE MORPHING DOORS â fixed-position, JS-driven       -->
 <!-- =================================================== -->
 <a class="v4-mdoor" data-idx="0" data-target="spirits" href="spirits/index.html">
   <div class="m-photo" style="background-image: url('assets/photos/door-spirits.jpg');"></div>
@@ -1937,7 +1937,7 @@
 </section>
 
 <!-- =================================================== -->
-<!-- STILLHOUSE — Spirits teaser                          -->
+<!-- STILLHOUSE â Spirits teaser                          -->
 <!-- =================================================== -->
 <section class="v4-section v4-stillhouse cursor-glow stickyfx" id="spirits">
   <div class="stage">
@@ -1985,7 +1985,7 @@
 </section>
 
 <!-- =================================================== -->
-<!-- TABLE — Restaurant teaser                            -->
+<!-- TABLE â Restaurant teaser                            -->
 <!-- =================================================== -->
 <section class="v4-section v4-table stickyfx" id="table">
   <div class="stage">
@@ -2012,7 +2012,7 @@
 </section>
 
 <!-- =================================================== -->
-<!-- VENUE — Events teaser                                -->
+<!-- VENUE â Events teaser                                -->
 <!-- =================================================== -->
 <section class="v4-section v4-venue cursor-glow stickyfx" id="venue">
   <div class="stage">
@@ -2040,7 +2040,7 @@
 </section>
 
 <!-- =================================================== -->
-<!-- ALMANAC — visit / waitlist                           -->
+<!-- ALMANAC â visit / waitlist                           -->
 <!-- =================================================== -->
 <footer class="v4-footer" id="visit">
   <div class="ft-row ft-primary">
@@ -2084,7 +2084,7 @@
 </footer>
 
 <script>
-// Countdown banner — Thornton Single Malt drops May 22, 2026 6 pm CT
+// Countdown banner â Thornton Single Malt drops May 22, 2026 6 pm CT
 (function () {
   const banner = document.getElementById('asm-banner');
   if (!banner) return;
@@ -2116,8 +2116,8 @@
 
 <script>
 (function () {
-  // ─── DOOR MORPH ENGINE ─────────────────────────────────────
-  // The 3 fixed doors animate from hero positions → shelf-pill positions
+  // âââ DOOR MORPH ENGINE âââââââââââââââââââââââââââââââââââââ
+  // The 3 fixed doors animate from hero positions â shelf-pill positions
   // based on page scroll, with content fading between door view and pill view.
 
   const body = document.body;
@@ -2130,7 +2130,7 @@
   const isMobile = () => window.matchMedia('(max-width: 900px)').matches;
 
   // Compute start (hero) and end (shelf) rects for each door.
-  // End rects are computed mathematically from CSS variables — no DOM measurement.
+  // End rects are computed mathematically from CSS variables â no DOM measurement.
   let startRects = [], endRects = [];
   function measure() {
     if (isMobile()) return;
@@ -2141,7 +2141,7 @@
     const BANNER_H = 48;
     const SHELF_H  = 64;
 
-    // Hero (start) — doc coords
+    // Hero (start) â doc coords
     const heroRect = heroSlots.getBoundingClientRect();
     const scrollY = window.scrollY || window.pageYOffset || 0;
     const sTopDoc = heroRect.top + scrollY;
@@ -2151,7 +2151,7 @@
       topDoc: sTopDoc, left: i * sW, width: sW, height: sH
     }));
 
-    // Shelf (end) — computed viewport coords
+    // Shelf (end) â computed viewport coords
     const vw = window.innerWidth;
     const totalW = PILL_W * 3 + PILL_GAP * 2;
     const startX = (vw - totalW) / 2;
@@ -2164,7 +2164,7 @@
     }));
   }
 
-  // Apply rects in VIEWPORT coords (position: fixed) — interpolated by p.
+  // Apply rects in VIEWPORT coords (position: fixed) â interpolated by p.
   function update() {
     const y = window.scrollY || window.pageYOffset;
     const vh = window.innerHeight;
@@ -2182,7 +2182,7 @@
 
     const morphRange = vh * 0.70;   // px scroll over which morph happens
     const raw = Math.max(0, Math.min(1, y / morphRange));
-    // ease-in-out-cubic — slow start, smooth middle, gentle landing
+    // ease-in-out-cubic â slow start, smooth middle, gentle landing
     const p = raw < 0.5 ? 4 * raw * raw * raw : 1 - Math.pow(-2 * raw + 2, 3) / 2;
 
     // Hero text fade
@@ -2191,14 +2191,14 @@
     // Shelf reveal
     if (y > 60) body.classList.add('shelf-on'); else body.classList.remove('shelf-on');
 
-    // Doors open / closed body class — drives hover gating
+    // Doors open / closed body class â drives hover gating
     if (p < 0.4) body.classList.add('doors-open');
     else         body.classList.remove('doors-open');
 
     doors.forEach((d, i) => {
       const s = startRects[i] || { topDoc: vh * 0.42 + y, left: i * window.innerWidth/3, width: window.innerWidth/3, height: vh * 0.58 };
       const e = endRects[i]   || { top: 14, left: window.innerWidth / 2 - 198 + i * 138, width: 132, height: 36 };
-      // START is in doc coords → convert to viewport-Y by subtracting current scroll
+      // START is in doc coords â convert to viewport-Y by subtracting current scroll
       // END is already in viewport coords (shelf is position:fixed)
       const sTopV = s.topDoc - y;
       const eTopV = e.top;
@@ -2252,7 +2252,7 @@
 
   init();
 
-  // ─── ACTIVE SECTION HIGHLIGHT ─────────────────────────────
+  // âââ ACTIVE SECTION HIGHLIGHT âââââââââââââââââââââââââââââ
   const sections = ['spirits','table','venue'].map(id => document.getElementById(id)).filter(Boolean);
   if (sections.length) {
     const setActive = (id) => {
@@ -2268,7 +2268,7 @@
     sections.forEach(s => io.observe(s));
   }
 
-  // ─── REVEAL ON SCROLL ─────────────────────────────────────
+  // âââ REVEAL ON SCROLL âââââââââââââââââââââââââââââââââââââ
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -2280,7 +2280,7 @@
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-in'));
   }
 
-  // ─── STICKY-STAGE WORD-STAGGER ENGINE ────────────────────
+  // âââ STICKY-STAGE WORD-STAGGER ENGINE ââââââââââââââââââââ
   // One unified scroll handler for Spirits / Dine / Events. Each section is taller
   // than the viewport with a sticky inner .stage. We compute scroll progress through
   // the section (0 = stage just pinned, 1 = stage just about to unpin) and toggle
@@ -2289,9 +2289,9 @@
     const isDesktop = () => window.matchMedia('(min-width: 901px)').matches;
     const sections = Array.from(document.querySelectorAll('.stickyfx'));
     if (!sections.length) return;
-    // Thresholds chosen for tighter sections (~50vh of pinned scroll travel) — words reveal
+    // Thresholds chosen for tighter sections (~50vh of pinned scroll travel) â words reveal
     // earlier and stagger across the first half, content lands by 65%.
-    const STEPS = [0.08, 0.22, 0.38, 0.55];
+    const STEPS = [0.10, 0.22, 0.34, 0.48];
     let raf = 0;
     function update() {
       raf = 0;
@@ -2324,7 +2324,7 @@
   })();
 
 
-  // ─── COUNTER ─────────────────────────────────────────────
+  // âââ COUNTER âââââââââââââââââââââââââââââââââââââââââââââ
   document.querySelectorAll('[data-count]').forEach(el => {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -2345,7 +2345,7 @@
     io.observe(el);
   });
 
-  // ─── CURSOR GLOW ON HERO ─────────────────────────────────
+  // âââ CURSOR GLOW ON HERO âââââââââââââââââââââââââââââââââ
   let glowRaf = null, gx = 50, gy = 28;
   hero.addEventListener('mousemove', (e) => {
     const r = hero.getBoundingClientRect();
@@ -2362,7 +2362,7 @@
     hero.style.setProperty('--cy', '28%');
   });
 
-  // ─── CURSOR GLOW on .cursor-glow sections ────────────────
+  // âââ CURSOR GLOW on .cursor-glow sections ââââââââââââââââ
   document.querySelectorAll('.cursor-glow').forEach(sec => {
     let r = null;
     sec.addEventListener('mouseenter', () => {
@@ -2380,7 +2380,7 @@
     });
   });
 
-  // ─── SMOOTH SCROLL ───────────────────────────────────────
+  // âââ SMOOTH SCROLL âââââââââââââââââââââââââââââââââââââââ
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', (e) => {
       const id = a.getAttribute('href').slice(1);
@@ -2391,7 +2391,7 @@
     });
   });
 
-  // ─── DOOR CLICK: when pill state, scroll to section instead of navigating
+  // âââ DOOR CLICK: when pill state, scroll to section instead of navigating
   doors.forEach(d => {
     d.addEventListener('click', (e) => {
       const p = parseFloat(d.style.getPropertyValue('--p')) || 0;
