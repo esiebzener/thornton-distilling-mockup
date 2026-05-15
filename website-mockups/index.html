@@ -2270,11 +2270,14 @@
       d.style.setProperty('--p', p.toFixed(3));
       // Keep d-headline visible throughout morph — CSS % alone can't do this
       // because the door moves above the viewport during mid-morph.
+      // Buffer = BANNER_H(48) + SHELF_H(64) + transform-offset(29) = 141px
       const hl = d.querySelector('.d-headline');
       if (hl) {
         const naturalTop = (1 - p) * height * 0.72 + p * height * 0.5;
-        const minTop = Math.min(Math.max(0, -top) + 40, height - 15);
+        const minTop = Math.min(Math.max(0, -top) + 141, height - 10);
         hl.style.top = Math.max(naturalTop, minTop) + 'px';
+        // Fade label gracefully as it rolls into shelf (p 0.7 → 1)
+        hl.style.opacity = p > 0.7 ? Math.max(0, 1 - (p - 0.7) * 3.33) : 1;
       }
     });
   }
