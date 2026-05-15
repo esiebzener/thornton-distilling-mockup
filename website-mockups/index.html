@@ -2268,6 +2268,14 @@
       d.style.width = width + 'px';
       d.style.height = height + 'px';
       d.style.setProperty('--p', p.toFixed(3));
+      // Keep d-headline visible throughout morph — CSS % alone can't do this
+      // because the door moves above the viewport during mid-morph.
+      const hl = d.querySelector('.d-headline');
+      if (hl) {
+        const naturalTop = (1 - p) * height * 0.72 + p * height * 0.5;
+        const minTop = Math.min(Math.max(0, -top) + 40, height - 15);
+        hl.style.top = Math.max(naturalTop, minTop) + 'px';
+      }
     });
   }
 
