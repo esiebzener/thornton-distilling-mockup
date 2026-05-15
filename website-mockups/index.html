@@ -1738,32 +1738,7 @@
     }
   }
   
-  /* ── Persistent section toggle (Spirits/Dine/Events) ── */
-  .v4-section-toggle {
-    position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%);
-    display: flex; gap: 4px; padding: 5px;
-    background: rgba(14, 10, 7, 0.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(212, 175, 55, 0.28); border-radius: 999px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
-    z-index: 90; opacity: 0; pointer-events: none;
-    transition: opacity .5s ease, transform .5s ease;
-  }
-  .v4-section-toggle.show {
-    opacity: 1; pointer-events: auto;
-  }
-  .v4-st-btn {
-    padding: 10px 22px; font-family: 'Cinzel', serif;
-    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--cream); text-decoration: none; border-radius: 999px;
-    transition: background .3s ease, color .3s ease;
-    min-height: 44px; display: inline-flex; align-items: center; cursor: pointer;
-  }
-  .v4-st-btn:hover { background: rgba(212, 175, 55, 0.14); color: var(--gold-bright); }
-  .v4-st-btn.active { background: var(--gold); color: var(--ink-1); font-weight: 600; }
-  @media (prefers-reduced-motion: reduce) {
-    .v4-section-toggle, .v4-st-btn { transition: none; }
-  }
-
+  
   /* ── Logo anchor revealed during door morph ── */
   .v4-door-anchor {
     position: fixed;
@@ -2277,7 +2252,7 @@
         const minTop = Math.min(Math.max(0, -top) + 141, height - 10);
         hl.style.top = Math.max(naturalTop, minTop) + 'px';
         // Fade label gracefully as it rolls into shelf (p 0.7 → 1)
-        hl.style.opacity = p > 0.7 ? Math.max(0, 1 - (p - 0.7) * 3.33) : 1;
+        hl.style.opacity = 1;
       }
     });
   }
@@ -2470,11 +2445,7 @@
 </script>
 
 
-  <nav class="v4-section-toggle" aria-label="Section navigation">
-    <a href="#v4-stillhouse" class="v4-st-btn" data-target="stillhouse">Spirits</a>
-    <a href="#v4-table" class="v4-st-btn" data-target="table">Dine</a>
-    <a href="#v4-venue" class="v4-st-btn" data-target="venue">Events</a>
-  </nav>
+  
 
   <script>
   (() => {
