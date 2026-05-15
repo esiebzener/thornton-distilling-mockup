@@ -542,7 +542,7 @@
   .v4-mdoor .m-content {
     position: absolute; inset: 0;
     pointer-events: none;
-    opacity: calc(1 - var(--p, 0) * 1.15);
+    opacity: calc(1 - max(0, var(--p, 0) - 0.65) * 2.86);
   }
   /* Door content (bottom-up): eyebrow (small label) → step (CTA) → sub → headline (above, via .d-headline) */
   .v4-mdoor .m-content .d-eyebrow {
@@ -611,7 +611,7 @@
      step-by-step on scroll (headline → lede → each chapter in sequence). */
   .v4-archive {
     position: relative;
-    height: 280vh;
+    height: 360vh;
     background:
       radial-gradient(ellipse 80% 50% at 50% 0%, rgba(31, 61, 47, 0.22) 0%, transparent 70%),
       linear-gradient(180deg, #0c0907 0%, #15100c 100%);
@@ -777,7 +777,7 @@
      containing block that would break the inner .stage's position:sticky. */
   .v4-stillhouse {
     position: relative;
-    height: 280vh;
+    height: 360vh;
     background: var(--ink-2);
     overflow: clip;
   }
@@ -958,7 +958,7 @@
 
   .v4-table {
     position: relative;
-    height: 280vh;
+    height: 360vh;
     background: var(--ink-2);
     overflow: clip;
   }
@@ -1062,7 +1062,7 @@
      for the R-L-R zigzag rhythm (Spirits: R, Table: L, Events: R). */
   .v4-venue {
     position: relative;
-    height: 280vh;
+    height: 360vh;
     background: var(--ink-2);
     overflow: clip;
   }
@@ -2343,7 +2343,7 @@
     const isDesktop = () => window.matchMedia('(min-width: 901px)').matches;
     const sections = Array.from(document.querySelectorAll('.stickyfx'));
     if (!sections.length) return;
-    const STEPS = [0.01, 0.18, 0.35, 0.52, 0.70, 0.88];
+    const STEPS = [0.01, 0.10, 0.19, 0.28, 0.40, 0.55];
     let raf = 0;
     function update() {
       raf = 0;
