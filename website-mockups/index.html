@@ -530,7 +530,7 @@
     /* Smooth interpolation: large → small, just-above-sub → center.
        Hero `top` is calc(100% - 282px) so the headline sits a FIXED distance
        above the sub no matter how tall the door is. */
-    font-size: calc(94px - var(--p, 0) * 80px);
+    font-size: calc(94px - var(--p, 0) * 70px);
     top:  calc((1 - var(--p, 0)) * 75% + var(--p, 0) * 50%);
     left: calc((1 - var(--p, 0)) * 12% + var(--p, 0) * 50%);
     /* translateY always centers vertically on `top` reference point.
@@ -2480,5 +2480,27 @@
     update();
   })();
   </script>
+
+<script>
+(function(){
+  var map=[
+    ['.v4-stillhouse','spirits'],
+    ['.v4-table','table'],
+    ['.v4-venue','venue']
+  ];
+  function tick(){
+    var y=pageYOffset;
+    map.forEach(function(pair){
+      var sec=document.querySelector(pair[0]);
+      var door=document.querySelector('.v4-mdoor[data-target="'+pair[1]+'"]');
+      if(!sec||!door)return;
+      var active=y>=sec.offsetTop&&y<sec.offsetTop+sec.offsetHeight;
+      door.classList.toggle('is-active',active);
+    });
+  }
+  addEventListener('scroll',tick,{passive:true});
+  tick();
+})();
+</script>
 </body>
 </html>
